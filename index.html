@@ -480,9 +480,13 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">University of California San Diego</h4>
-
-              <span>2024 — 2026</span>
+              <div class="timeline-header">
+                <div class="timeline-header-left">
+                  <img src="./assets/images/logos/ucsd.png" alt="UCSD Logo" class="timeline-logo">
+                  <h4 class="h4 timeline-item-title">University of California San Diego</h4>
+                </div>
+                <span class="timeline-year">2024 — 2026</span>
+              </div>
 
               <p class="timeline-text">
                 <br/>
@@ -498,9 +502,13 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Pune Institute of Computer Technology</h4>
-
-              <span>2017 — 2021</span>
+              <div class="timeline-header">
+                <div class="timeline-header-left">
+                  <img src="./assets/images/logos/pict.png" alt="PICT Logo" class="timeline-logo">
+                  <h4 class="h4 timeline-item-title">Pune Institute of Computer Technology</h4>
+                </div>
+                <span class="timeline-year">2017 — 2021</span>
+              </div>
 
               <p class="timeline-text">
                 <br />GPA: 4.0/4.0 (9.77/10)<br />
@@ -525,9 +533,13 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">AppFolio, Software Engineer Intern</h4>
-
-              <span>06/2025 - 09/2025</span>
+              <div class="timeline-header">
+                <div class="timeline-header-left">
+                  <img src="./assets/images/logos/appfolio.png" alt="AppFolio Logo" class="timeline-logo">
+                  <h4 class="h4 timeline-item-title">AppFolio, Software Engineer Intern</h4>
+                </div>
+                <span class="timeline-year">06/2025 - 09/2025</span>
+              </div>
 
               <p class="timeline-text">
                 <br />Software Engineer Intern at AppFolio
@@ -536,26 +548,38 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">ION Group, Software Development Engineer</h4>
-
-              <span>06/2021 - 07/2024</span>
+              <div class="timeline-header">
+                <div class="timeline-header-left">
+                  <img src="./assets/images/logos/ion-group.png" alt="ION Group Logo" class="timeline-logo">
+                  <h4 class="h4 timeline-item-title">ION Group, Software Development Engineer</h4>
+                </div>
+                <span class="timeline-year">06/2021 - 07/2024</span>
+              </div>
 
               <p class="timeline-text">
-                <br />Contributed to the development of a scalable, cloud-native, multi-tenant SaaS integration
-                platform, connecting in-house Commodity Trading and Risk Management Systems with external Post-Trade
-                systems <br /><br />
-                Improved system performance by 27% through thread-level parallel processing and load-adaptive scaling
-                strategies <br /><br />
-                Reduced REST API response time by 15% by optimizing database queries and implementing Memcached caching
-                mechanisms <br /><br />
+                <br />Contributed to the development of a scalable, cloud-native, multi-tenant SaaS integration platform, connecting in-house Commodity Trading and Risk Management Systems with external Post-Trade systems as a collaborative team.
+                <br /><br />
+                Improved application system performance by 27% through thread-level parallel processing and load-adaptive scaling strategies.
+                <br /><br />
+                Reduced REST API response time by 15% by optimizing database queries and implementing Memcached caching mechanisms.
+                <br /><br />
+                Led user interface development using Angular, reducing development time by 30% through implementation of reusable components and leveraging dependency injection for loosely coupled services.
+                <br /><br />
+                Created automated testing scripts with Selenium and Rest Assured, improving reliability and reducing testing time by 33%.
+                <br /><br />
+                Maintained Jenkins CI/CD pipelines for automated deployment and orchestrated scheduled build jobs and releases.
               </p>
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">The Yellow Monk, Software Development Intern</h4>
-
-              <span>09/2020 - 05/2021</span>
+              <div class="timeline-header">
+                <div class="timeline-header-left">
+                  <img src="./assets/images/logos/theyellowmonk.png" alt="The Yellow Monk Logo" class="timeline-logo">
+                  <h4 class="h4 timeline-item-title">The Yellow Monk, Software Development Intern</h4>
+                </div>
+                <span class="timeline-year">09/2020 - 05/2021</span>
+              </div>
 
               <p class="timeline-text">
                 <br />Developed and optimized 3+ mobile applications using React Native, Redux, Flutter for diverse
@@ -566,9 +590,13 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">EventBeep, Software Development Intern</h4>
-
-              <span>03/2020 - 08/2020</span>
+              <div class="timeline-header">
+                <div class="timeline-header-left">
+                  <img src="./assets/images/logos/eventbeep.png" alt="EventBeep Logo" class="timeline-logo">
+                  <h4 class="h4 timeline-item-title">EventBeep, Software Development Intern</h4>
+                </div>
+                <span class="timeline-year">03/2020 - 08/2020</span>
+              </div>
 
               <p class="timeline-text">
                 <br />Developed initial version of EventBeep, a campus integration application serving 10,000+ students,
@@ -1123,6 +1151,186 @@
     </div>
 
   </main>
+
+  <!-- Chatbot Widget Start -->
+<style>
+#chatbot-fab {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #4f8cff 60%, #6ee7b7 100%);
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10001;
+  transition: box-shadow 0.2s;
+}
+#chatbot-fab:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.22);
+}
+#chatbot-fab svg {
+  width: 28px;
+  height: 28px;
+  color: #fff;
+}
+#chatbot-container {
+  position: fixed;
+  bottom: 100px;
+  right: 32px;
+  width: 340px;
+  max-width: 95vw;
+  height: 440px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  display: none;
+  flex-direction: column;
+  z-index: 10000;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+#chatbot-header {
+  background: linear-gradient(135deg, #4f8cff 60%, #6ee7b7 100%);
+  color: #fff;
+  padding: 18px 20px 14px 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#chatbot-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+  margin-left: 8px;
+}
+#chatbot-messages {
+  flex: 1;
+  padding: 16px 14px 8px 14px;
+  overflow-y: auto;
+  background: #f8fafc;
+  font-size: 0.98rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.chatbot-msg {
+  max-width: 80%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  margin-bottom: 2px;
+  word-break: break-word;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.chatbot-msg.user {
+  align-self: flex-end;
+  background: linear-gradient(135deg, #4f8cff 60%, #6ee7b7 100%);
+  color: #fff;
+}
+.chatbot-msg.bot {
+  align-self: flex-start;
+  background: #fff;
+  color: #222;
+  border: 1px solid #e5e7eb;
+}
+#chatbot-input-row {
+  display: flex;
+  align-items: center;
+  padding: 12px 14px;
+  background: #f1f5f9;
+  border-top: 1px solid #e5e7eb;
+}
+#chatbot-input {
+  flex: 1;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 1rem;
+  background: #fff;
+  margin-right: 8px;
+  outline: none;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+#chatbot-send {
+  background: linear-gradient(135deg, #4f8cff 60%, #6ee7b7 100%);
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#chatbot-send:active {
+  background: linear-gradient(135deg, #3b82f6 60%, #34d399 100%);
+}
+</style>
+<div id="chatbot-fab" title="Chat with me!" onclick="openChatbot()">
+  <svg viewBox="0 0 24 24" fill="none"><path d="M12 3C7.03 3 3 6.58 3 11c0 1.7.66 3.28 1.8 4.6-.13.5-.47 1.8-.7 2.7-.1.4.3.8.7.7.9-.23 2.2-.57 2.7-.7C9.72 20.34 11.3 21 13 21c4.97 0 9-3.58 9-8s-4.03-8-9-8z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</div>
+<div id="chatbot-container">
+  <div id="chatbot-header">
+    <span>Ask me anything!</span>
+    <button id="chatbot-close" onclick="closeChatbot()">&times;</button>
+  </div>
+  <div id="chatbot-messages">
+    <div class="chatbot-msg bot">Hi! 👋 I am your portfolio assistant. Ask me anything about this website.</div>
+  </div>
+  <form id="chatbot-input-row" onsubmit="return sendChatbotMessage();">
+    <input id="chatbot-input" type="text" placeholder="Type your question..." autocomplete="off" />
+    <button id="chatbot-send" type="submit">Send</button>
+  </form>
+</div>
+<script>
+const chatbotFab = document.getElementById('chatbot-fab');
+const chatbotContainer = document.getElementById('chatbot-container');
+const chatbotMessages = document.getElementById('chatbot-messages');
+const chatbotInput = document.getElementById('chatbot-input');
+
+function openChatbot() {
+  chatbotContainer.style.display = 'flex';
+  chatbotFab.style.display = 'none';
+  setTimeout(() => chatbotInput.focus(), 200);
+}
+function closeChatbot() {
+  chatbotContainer.style.display = 'none';
+  chatbotFab.style.display = 'flex';
+}
+function appendMessage(text, sender) {
+  const msg = document.createElement('div');
+  msg.className = 'chatbot-msg ' + sender;
+  msg.innerText = text;
+  chatbotMessages.appendChild(msg);
+  chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+}
+function sendChatbotMessage() {
+  const text = chatbotInput.value.trim();
+  if (!text) return false;
+  appendMessage(text, 'user');
+  chatbotInput.value = '';
+  setTimeout(() => {
+    appendMessage('This is a demo. Backend integration coming soon!', 'bot');
+  }, 600);
+  return false;
+}
+// Optional: open with Enter key if closed
+window.addEventListener('keydown', e => {
+  if ((e.key === 'c' || e.key === 'C') && e.ctrlKey && chatbotContainer.style.display !== 'flex') {
+    openChatbot();
+  }
+});
+</script>
+<!-- Chatbot Widget End -->
 
 
 
