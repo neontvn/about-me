@@ -16,6 +16,75 @@
 </head>
 
 <body>
+  <!-- Top Navigation Bar -->
+  <nav class="navbar" data-navbar>
+    <div class="navbar-container">
+      <a href="#hero" class="navbar-logo">TN</a>
+      <ul class="navbar-list">
+        <li class="navbar-item">
+          <a href="#about" class="navbar-link active" data-nav-link>About</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#resume" class="navbar-link" data-nav-link>Resume</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#skills" class="navbar-link" data-nav-link>Skills</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#projects" class="navbar-link" data-nav-link>Projects</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#blogs" class="navbar-link" data-nav-link>Blogs</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <p class="hero-greeting">Hi, I'm</p>
+      <h1 class="hero-name">Tanmay Nale</h1>
+      <p class="hero-tagline">Software Engineer · MS CS @ UC San Diego</p>
+      <div class="hero-scroll-indicator">
+        <span>Scroll to explore</span>
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </div>
+    </div>
+  </section>
+
+  <!-- Left Vertical Social Bar -->
+  <aside class="social-sidebar">
+    <ul class="social-sidebar-list">
+      <li class="social-sidebar-item">
+        <a href="mailto:tvnale.99@gmail.com" class="social-sidebar-link" title="Email">
+          <ion-icon name="mail-outline"></ion-icon>
+        </a>
+      </li>
+      <li class="social-sidebar-item">
+        <a href="tel:+18582750140" class="social-sidebar-link" title="Phone">
+          <ion-icon name="call-outline"></ion-icon>
+        </a>
+      </li>
+      <li class="social-sidebar-item">
+        <a href="https://www.linkedin.com/in/tanmay-nale/" target="_blank" class="social-sidebar-link" title="LinkedIn">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+      </li>
+      <li class="social-sidebar-item">
+        <a href="https://github.com/neontvn" target="_blank" class="social-sidebar-link" title="GitHub">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+      </li>
+      <li class="social-sidebar-item">
+        <a href="https://x.com/nale_tanmay" target="_blank" class="social-sidebar-link" title="Twitter">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+      </li>
+    </ul>
+    <div class="social-sidebar-line"></div>
+  </aside>
+
   <main>
     <aside class="sidebar" data-sidebar>
 
@@ -33,90 +102,8 @@
           <p class="title" style="margin-top: 0.7rem;">Ex-Software Engineer @ ION Group</p> 
         </div>
 
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show More</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
       </div>
 
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:tvnale.99@gmail.com" class="contact-link">tvnale.99@gmail.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+12133522795" class="contact-link">+1 (858) 275-0140</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>San Diego, California</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/tanmay-nale/" target="_blank" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://github.com/neontvn" target="_blank" class="social-link">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://x.com/nale_tanmay" target="_blank" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
 
     </aside>
 
@@ -129,37 +116,6 @@
     -->
 
     <div class="main-content">
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Skills</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Projects</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blogs</button>
-          </li>
-<!-- 
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li> -->
-
-        </ul>
-
-      </nav>
 
 
 
@@ -169,7 +125,7 @@
         - #ABOUT
       -->
 
-      <article class="about active" data-page="about">
+      <article class="about section" id="about">
 
         <header>
           <h2 class="h2 article-title">About me</h2>
@@ -460,7 +416,7 @@
         - #RESUME
       -->
 
-      <article class="resume" data-page="resume">
+      <article class="resume section" id="resume">
 
         <header>
           <h2 class="h2 article-title">Resume</h2>
@@ -619,7 +575,7 @@
         - #SKILLS
       -->
 
-      <article class="skills" data-page="skills">
+      <article class="skills section" id="skills">
 
         <header>
           <h2 class="h2 article-title">Skills</h2>
@@ -927,7 +883,7 @@
         - #PROJECTS
       -->
 
-      <article class="projects" data-page="projects">
+      <article class="projects section" id="projects">
 
         <header>
           <h2 class="h2 article-title">Projects</h2>
@@ -973,7 +929,7 @@
         - #BLOGS
       -->
 
-      <article class="blogs" data-page="blogs">
+      <article class="blogs section" id="blogs">
 
         <header>
           <h2 class="h2 article-title">Blogs</h2>
@@ -1109,7 +1065,7 @@
         - #CONTACT
       -->
 
-      <article class="contact" data-page="contact">
+      <article class="contact section" id="contact">
 
         <header>
           <h2 class="h2 article-title">Contact</h2>
