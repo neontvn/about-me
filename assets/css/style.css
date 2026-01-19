@@ -224,9 +224,11 @@ article.section:last-of-type {
 .article-title {
   position: relative;
   padding-bottom: 7px;
-  font-family: var(--ff-heading);
-  font-weight: var(--fw-600);
-  letter-spacing: -0.02em;
+  font-family: var(--ff-display);
+  font-weight: var(--fw-700);
+  letter-spacing: -0.03em;
+  font-size: clamp(28px, 5vw, 42px);
+  color: var(--white-1);
 }
 
 .article-title::after {
@@ -1072,7 +1074,7 @@ main {
 
 
 .testimonials-section {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   padding: 0 15px;
 }
 
@@ -1182,7 +1184,7 @@ main {
 
 .testimonial-text {
   color: var(--light-gray);
-  font-size: var(--fs-6);
+  font-size: var(--fs-5);
   font-weight: var(--fw-300);
   line-height: 1.75;
   letter-spacing: 0.01em;
@@ -1536,12 +1538,12 @@ main {
   color: var(--light-gray);
   font-weight: var(--fw-300);
   line-height: 1.75;
-  font-size: var(--fs-6);
+  font-size: var(--fs-5);
 }
 
 .timeline-summary {
   color: var(--light-gray-70);
-  font-size: var(--fs-6);
+  font-size: var(--fs-5);
   line-height: 1.65;
   margin-bottom: 14px;
 }
@@ -1559,7 +1561,7 @@ main {
   position: relative;
   padding-left: 18px;
   color: var(--light-gray);
-  font-size: var(--fs-7);
+  font-size: var(--fs-6);
   line-height: 1.6;
 }
 
@@ -1979,7 +1981,7 @@ main {
 
 .projects-grid .project-description {
   color: var(--light-gray);
-  font-size: var(--fs-7);
+  font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.7;
   letter-spacing: 0.01em;
@@ -2487,7 +2489,7 @@ textarea.form-input::-webkit-resizer {
   }
 
   .blog-item-title {
-    font-size: var(--fs-2);
+    font-size: var(--fs-4);
   }
 
 

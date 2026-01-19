@@ -21,7 +21,7 @@
   <!-- Top Navigation Bar -->
   <nav class="navbar" data-navbar>
     <div class="navbar-container">
-      <a href="#hero" class="navbar-brand">
+      <a href="#home" class="navbar-brand">
         <img src="./assets/images/tanmay.png" alt="Tanmay Nale" class="navbar-avatar">
         <span class="navbar-name">Tanmay Nale</span>
       </a>
@@ -43,7 +43,7 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero" id="hero">
+  <section class="hero" id="home">
     <div class="hero-content">
       <p class="hero-greeting">Hi, I'm</p>
       <h1 class="hero-name">Tanmay Nale</h1>
@@ -66,8 +66,11 @@
         </div>
       </div>
       <div class="hero-scroll-indicator">
-        <span>Scroll to debug</span>
-        <ion-icon name="chevron-down-outline"></ion-icon>
+        <a href="#about"
+          style="display: flex; flex-direction: column; align-items: center; text-decoration: none; color: inherit; gap: 10px;">
+          <span>Scroll to debug</span>
+          <ion-icon name="chevron-down-outline" style="margin-top: 4px;"></ion-icon>
+        </a>
       </div>
     </div>
   </section>
@@ -393,18 +396,55 @@
               </div>
 
             </li>
+
             <li class="project-item project-item-horizontal">
 
               <figure class="project-img">
-                <img src="./assets/images/projects/ticket.png" alt="E-Commerce Microservices Platform">
+                <img src="./assets/images/projects/kv-cache.png" alt="KV-Cache Manager">
               </figure>
 
               <div class="project-content">
 
-                <h3 class="h3 project-title">E-Commerce Microservices Platform</h3>
+                <h3 class="h3 project-title">KV-Cache Manager</h3>
 
                 <p class="project-description">
-                  TicketingApp is a cloud-native event ticketing platform built on an event-driven microservices
+                  A standalone KV-cache memory manager for LLM inference, focused on block-based allocation, eviction
+                  policies, and memory observability at scale.Designed to decouple memory management from model
+                  execution for easier experimentation and debugging.
+                </p>
+
+                <p class="project-category">C++ · GPU Memory Mgmt · Low-latency LLM Inference</p>
+
+                <div class="project-buttons">
+                  <a href="https://github.com/dev-pulse-systems/kv-cache-orchestrator" target="_blank"
+                    class="project-btn github-btn">
+                    <ion-icon name="logo-github"></ion-icon>
+                    <span>GitHub - work in progress</span>
+                  </a>
+                  <!-- <a href="https://github.com/dev-pulse-systems/kv-cache-orchestrator" target="_blank"
+                    class="project-btn demo-btn">
+                    <ion-icon name="open-outline"></ion-icon>
+                    <span>Demo</span>
+                  </a> -->
+                </div>
+
+              </div>
+
+            </li>
+
+
+            <li class="project-item project-item-horizontal">
+
+              <figure class="project-img">
+                <img src="./assets/images/projects/ticket.png" alt="E-Commerce Platform">
+              </figure>
+
+              <div class="project-content">
+
+                <h3 class="h3 project-title">E-Commerce Platform</h3>
+
+                <p class="project-description">
+                  Ticketing App is a cloud-native event ticketing platform built on an event-driven microservices
                   architecture, supporting real-time reservations, secure payments, order expiration, and eventual
                   consistency at scale.
                 </p>
@@ -493,6 +533,42 @@
 
             </li>
 
+            <li class="project-item project-item-horizontal">
+
+              <figure class="project-img">
+                <img src="./assets/images/projects/meeting.png" alt="Meeting Summarizer Agent">
+              </figure>
+
+              <div class="project-content">
+
+                <h3 class="h3 project-title">Meeting Summarizer Agent</h3>
+
+                <p class="project-description">
+                  The Meeting Summarizer Agent turns long meetings into clear outcomes capturing decisions, assigning
+                  action items, and syncing everything instantly to Google Calendar and Tasks. Built with persistent
+                  memory, smart scheduling, and context-aware AI.
+                </p>
+
+                <p class="project-category">Python · AI Agents · Gemini LLM · Docker · OAuth 2.0</p>
+
+                <div class="project-buttons">
+                  <a href="https://github.com/Jyotikakakar/Briefly-a-meeting-summarizer-agent" target="_blank"
+                    class="project-btn github-btn">
+                    <ion-icon name="logo-github"></ion-icon>
+                    <span>GitHub</span>
+                  </a>
+                  <a href="https://github.com/Jyotikakakar/Briefly-a-meeting-summarizer-agent" target="_blank"
+                    class="project-btn demo-btn">
+                    <ion-icon name="open-outline"></ion-icon>
+                    <span>Demo</span>
+                  </a>
+                </div>
+
+              </div>
+
+            </li>
+
+
 
           </ul>
 
@@ -515,19 +591,21 @@
                   </div>
                   <div class="education-info">
                     <div class="education-top-row">
-                      <h3 class="education-university">UC San Diego</h3>
+                      <h3 class="education-university">University of California San Diego</h3>
                       <span class="education-badge">Current</span>
                     </div>
                     <p class="education-degree">M.S. in Computer Science</p>
-                    <p class="education-specialization">Computer Systems · 2024 — 2026</p>
+                    <p class="education-specialization">Computer Systems · Sept 2024 - March 2026</p>
                   </div>
                 </div>
                 <div class="education-courses">
-                  <span class="course-tag">Operating Systems</span>
-                  <span class="course-tag">Distributed Systems</span>
-                  <span class="course-tag">Computer Architecture</span>
-                  <span class="course-tag">Machine Learning</span>
+                  <span class="course-tag">Network Systems</span>
                   <span class="course-tag">Virtualization</span>
+                  <span class="course-tag">Cloud Computing</span>
+                  <span class="course-tag">Operating Systems</span>
+                  <span class="course-tag">Systems for LLMs & AI Agents</span>
+                  <span class="course-tag">Computer Architecture</span>
+                  <span class="course-tag">Teaching Assistant: Principles of Software Engineering</span>
                 </div>
               </div>
             </div>
@@ -541,11 +619,11 @@
                   </div>
                   <div class="education-info">
                     <div class="education-top-row">
-                      <h3 class="education-university">PICT, Pune</h3>
-                      <span class="education-badge gpa-badge">9.77 GPA</span>
+                      <h3 class="education-university">Pune Institute of Computer Technology</h3>
+                      <span class="education-badge gpa-badge">9.77/10 GPA</span>
                     </div>
                     <p class="education-degree">B.E. in Computer Engineering</p>
-                    <p class="education-specialization">University of Pune · 2017 — 2021</p>
+                    <p class="education-specialization">University of Pune · 2017 - 2021</p>
                   </div>
                 </div>
                 <div class="education-achievement">
@@ -615,7 +693,8 @@
         </div>
       </section>
 
-      <article class="blogs section" style="background-color: transparent; border: none; box-shadow: none;" id="blogs">
+      <article class="blogs section"
+        style="background-color: transparent; border: none; box-shadow: none; margin-top: 0;" id="blogs">
 
         <header>
           <h2 class="h2 article-title">Blogs</h2>
@@ -635,7 +714,7 @@
                 <div class="blog-content">
 
                   <div class="blog-meta">
-                    <p class="blog-category">Distributed Systems</p>
+                    <p class="blog-category">Systems</p>
 
                     <span class="dot"></span>
 
@@ -664,7 +743,7 @@
                 <div class="blog-content">
 
                   <div class="blog-meta">
-                    <p class="blog-category">System Design</p>
+                    <p class="blog-category">Systems</p>
 
                     <span class="dot"></span>
 
