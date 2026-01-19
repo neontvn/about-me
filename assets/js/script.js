@@ -10,26 +10,39 @@ if (sidebarBtn) {
 }
 
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const sections = document.querySelectorAll(".section");
 
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function (e) {
-    // Remove active from all links
-    navigationLinks.forEach(link => link.classList.remove("active"));
-    // Add active to clicked link
+let isManualNavigation = false;
+
+// Handle click on nav links
+navigationLinks.forEach(link => {
+  link.addEventListener("click", function (e) {
+    // Mark as manual navigation
+    isManualNavigation = true;
+
+    // Update active state immediately
+    navigationLinks.forEach(l => l.classList.remove("active"));
     this.classList.add("active");
-  });
-}
 
-function updateActiveNavOnScroll() {
-  const scrollPosition = window.scrollY + 150;
-  
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.offsetHeight;
-    const sectionId = section.getAttribute("id");
-    
-    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+    // Reset flag after scroll completes
+    setTimeout(() => {
+      isManualNavigation = false;
+    }, 1500);
+  });
+});
+
+// Use IntersectionObserver for scroll-based highlighting
+const observerOptions = {
+  root: null,
+  rootMargin: "-20% 0px -70% 0px", // Triggers when section is in top 30% of viewport
+  threshold: 0
+};
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  if (isManualNavigation) return;
+
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const sectionId = entry.target.getAttribute("id");
       navigationLinks.forEach(link => {
         link.classList.remove("active");
         if (link.getAttribute("href") === "#" + sectionId) {
@@ -38,10 +51,12 @@ function updateActiveNavOnScroll() {
       });
     }
   });
-}
+}, observerOptions);
 
-window.addEventListener("scroll", updateActiveNavOnScroll);
-updateActiveNavOnScroll();
+// Observe all sections that have corresponding nav links
+document.querySelectorAll("#about, #resume, #projects, #blogs").forEach(section => {
+  if (section) sectionObserver.observe(section);
+});
 
 const navbar = document.querySelector(".navbar");
 

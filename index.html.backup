@@ -30,9 +30,6 @@
           <a href="#about" class="navbar-link active" data-nav-link>About</a>
         </li>
         <li class="navbar-item">
-          <a href="#resume" class="navbar-link" data-nav-link>Experience</a>
-        </li>
-        <li class="navbar-item">
           <a href="#projects" class="navbar-link" data-nav-link>Projects</a>
         </li>
         <li class="navbar-item">
@@ -230,125 +227,6 @@
         </div>
       </section>
 
-      <article class="resume section" style="background-color: transparent; border: none; box-shadow: none;"
-        id="resume">
-
-        <header>
-          <h2 class="h2 article-title">Experience</h2>
-        </header>
-
-        <section class="timeline">
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-              <div class="timeline-header">
-                <div class="timeline-header-left">
-                  <img src="./assets/images/logos/appfolio.png" alt="AppFolio Logo" class="timeline-logo">
-                  <div class="timeline-title-group">
-                    <h4 class="h4 timeline-item-title">AppFolio — Software Engineer Intern</h4>
-                    <span class="timeline-location">San Diego</span>
-                  </div>
-                </div>
-                <span class="timeline-year">Jun 2025 – Sep 2025</span>
-              </div>
-              <div class="timeline-text">
-                <p class="timeline-summary">Worked on high-traffic insurance and payments flows used by millions of
-                  customers. Focused on frontend performance, backend efficiency, and data accuracy in production
-                  systems.</p>
-                <ul class="timeline-bullets">
-                  <li>Built scalable, pixel-perfect cross-platform interfaces using React Native and modern state
-                    management, improving insurance conversion by 30% for 2M+ users</li>
-                  <li>Optimized GraphQL resolver patterns, increasing API throughput and reducing latency under peak
-                    load</li>
-                  <li>Improved policy document parsing using confidence scoring and rule-based validation, reducing
-                    manual review effort by 25%</li>
-                </ul>
-              </div>
-            </li>
-
-            <li class="timeline-item">
-              <div class="timeline-header">
-                <div class="timeline-header-left">
-                  <img src="./assets/images/logos/sdsc.png" alt="SDSC Logo" class="timeline-logo">
-                  <div class="timeline-title-group">
-                    <h4 class="h4 timeline-item-title">San Diego Supercomputer Center — Graduate Research Assistant</h4>
-                    <span class="timeline-location">San Diego</span>
-                  </div>
-                </div>
-                <span class="timeline-year">Feb 2025 – Jun 2025</span>
-              </div>
-              <div class="timeline-text">
-                <p class="timeline-summary">Contributed to systems-level research focused on broadband performance
-                  measurement and network reliability across heterogeneous environments.</p>
-                <ul class="timeline-bullets">
-                  <li>Standardized broadband test configurations to eliminate inconsistent measurements across networks
-                  </li>
-                  <li>Analyzed packet-flow variability and link behavior to improve measurement repeatability and reduce
-                    noise</li>
-                  <li>Strengthened automated testing pipelines with fault-tolerant scheduling and monitoring, reducing
-                    test failures by 30%</li>
-                </ul>
-              </div>
-            </li>
-
-            <li class="timeline-item">
-              <div class="timeline-header">
-                <div class="timeline-header-left">
-                  <img src="./assets/images/logos/ion-group.png" alt="ION Trading Logo" class="timeline-logo">
-                  <div class="timeline-title-group">
-                    <h4 class="h4 timeline-item-title">ION Trading — Software Development Engineer</h4>
-                    <span class="timeline-location">Pune</span>
-                  </div>
-                </div>
-                <span class="timeline-year">Jun 2021 – Jul 2024</span>
-              </div>
-              <div class="timeline-text">
-                <p class="timeline-summary">Worked on a large-scale, multi-tenant SaaS trading platform with strict
-                  performance, reliability, and concurrency requirements.</p>
-                <ul class="timeline-bullets">
-                  <li>Improved system throughput by 27% by introducing thread-level parallelism and removing
-                    serialization bottlenecks. Reduced p99 API latency by 15% through SQL hot-path optimizations, index
-                    tuning, and Memcached
-                    caching</li>
-                  <li>Built latency analysis tooling for 25K+ daily API calls, increasing endpoint reliability by 12%
-                  </li>
-                  <li>Designed a scalable Kafka-based notification system unifying Email and Slack delivery, handling
-                    1M+ messages</li>
-                  <li>Standardized cloud infrastructure using AWS CDK, CloudFormation, and Jenkins, reducing
-                    configuration drift and stabilizing deployments across environments</li>
-                </ul>
-              </div>
-            </li>
-
-            <li class="timeline-item">
-              <div class="timeline-header">
-                <div class="timeline-header-left">
-                  <img src="./assets/images/logos/theyellowmonk.png" alt="The Yellow Monk Logo" class="timeline-logo">
-                  <div class="timeline-title-group">
-                    <h4 class="h4 timeline-item-title">The Yellow Monk — Software Engineer Intern</h4>
-                    <span class="timeline-location">Pune</span>
-                  </div>
-                </div>
-                <span class="timeline-year">Sep 2020 – May 2021</span>
-              </div>
-              <div class="timeline-text">
-                <p class="timeline-summary">Worked on cross-platform mobile applications with a strong emphasis on
-                  performance, memory efficiency, and user experience.</p>
-                <ul class="timeline-bullets">
-                  <li>Developed and optimized mobile applications using React Native, Flutter, and Redux</li>
-                  <li>Reduced application load times by 40% through profiling, lazy loading, and caching strategies</li>
-                  <li>Improved runtime performance and network efficiency across iOS and Android, increasing user
-                    engagement by 30%</li>
-                </ul>
-              </div>
-            </li>
-
-          </ol>
-
-        </section>
-
-      </article>
-
       <article class="projects section" style="background-color: transparent; box-shadow: none; border: none;"
         id="projects">
 
@@ -500,6 +378,62 @@
 
       </article>
 
+      <section class="testimonials-section" id="testimonials">
+        <div class="testimonials-content">
+          <h2 class="testimonials-heading">What People Say</h2>
+
+          <div class="testimonials-grid">
+
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <figure class="testimonial-avatar">
+                  <img src="./assets/images/avatar-1.png" alt="Uday Naik" width="60">
+                </figure>
+                <div class="testimonial-author-info">
+                  <h4 class="testimonial-author-name">Uday Naik</h4>
+                  <p class="testimonial-author-role">VP of Engineering, ION Group</p>
+                </div>
+              </div>
+
+              <div class="testimonial-body">
+                <p class="testimonial-text">
+                  "I had the privilege of working closely with Tanmay for three years, and I can confidently attest to
+                  his excellence as a software developer. Tanmay is a quick learner who effortlessly grasps new
+                  concepts. His problem-solving abilities are exceptional, enabling him to tackle complex challenges
+                  with ease. His dedication to his work, coupled with his collaborative nature, makes him an
+                  invaluable team member. I highly recommend him for any role that requires a dedicated
+                  and skilled software professional."
+                </p>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <figure class="testimonial-avatar">
+                  <img src="./assets/images/avatar-4.png" alt="Param Jain" width="60">
+                </figure>
+                <div class="testimonial-author-info">
+                  <h4 class="testimonial-author-name">Param Jain</h4>
+                  <p class="testimonial-author-role">Co-Founder, The Yellow Monk</p>
+                </div>
+              </div>
+
+              <div class="testimonial-body">
+                <p class="testimonial-text">
+                  "Tanmay worked as a Software Developer on multiple projects at The Yellow Monk, where he
+                  consistently impressed with his technical proficiency and dedication. He was pivotal in delivering
+                  high-quality applications, bringing a keen attention to detail and a deep understanding of the
+                  development process. His proactive attitude and commitment to continuous improvement made him a
+                  reliable and valuable team member. I highly recommend Tanmay for any role that seeks a skilled
+                  and driven developer."
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       <section class="education-section" id="education">
         <div class="education-content">
           <h2 class="education-heading">Education</h2>
@@ -559,61 +493,124 @@
         </div>
       </section>
 
-      <section class="testimonials-section" id="testimonials">
-        <div class="testimonials-content">
-          <h2 class="testimonials-heading">What People Say</h2>
+      <article class="resume section" style="background-color: transparent; border: none; box-shadow: none;"
+        id="resume">
 
-          <div class="testimonials-grid">
+        <header>
+          <h2 class="h2 article-title">Experience</h2>
+        </header>
 
-            <div class="testimonial-card">
-              <div class="testimonial-header">
-                <figure class="testimonial-avatar">
-                  <img src="./assets/images/avatar-1.png" alt="Uday Naik" width="60">
-                </figure>
-                <div class="testimonial-author-info">
-                  <h4 class="testimonial-author-name">Uday Naik</h4>
-                  <p class="testimonial-author-role">VP of Engineering, ION Group</p>
+        <section class="timeline">
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <div class="timeline-header">
+                <div class="timeline-header-left">
+                  <img src="./assets/images/logos/appfolio.png" alt="AppFolio Logo" class="timeline-logo">
+                  <div class="timeline-title-group">
+                    <h4 class="h4 timeline-item-title">AppFolio — Software Engineer Intern</h4>
+                    <span class="timeline-location">San Diego</span>
+                  </div>
                 </div>
+                <span class="timeline-year">Jun 2025 – Sep 2025</span>
               </div>
-
-              <div class="testimonial-body">
-                <p class="testimonial-text">
-                  "I had the privilege of working closely with Tanmay for three years, and I can confidently attest to
-                  his excellence as a software developer. Tanmay is a quick learner who effortlessly grasps new
-                  concepts. His problem-solving abilities are exceptional, enabling him to tackle complex challenges
-                  with ease. His dedication to his work, coupled with his collaborative nature, makes him an
-                  invaluable team member. I highly recommend him for any role that requires a dedicated
-                  and skilled software professional."
-                </p>
+              <div class="timeline-text">
+                <p class="timeline-summary">Worked on high-traffic insurance and payments flows used by millions of
+                  customers. Focused on frontend performance, backend efficiency, and data accuracy in production
+                  systems.</p>
+                <ul class="timeline-bullets">
+                  <li>Built scalable, pixel-perfect cross-platform interfaces using React Native and modern state
+                    management, improving insurance conversion by 30% for 2M+ users</li>
+                  <li>Optimized GraphQL resolver patterns, increasing API throughput and reducing latency under peak
+                    load</li>
+                  <li>Improved policy document parsing using confidence scoring and rule-based validation, reducing
+                    manual review effort by 25%</li>
+                </ul>
               </div>
-            </div>
+            </li>
 
-            <div class="testimonial-card">
-              <div class="testimonial-header">
-                <figure class="testimonial-avatar">
-                  <img src="./assets/images/avatar-4.png" alt="Param Jain" width="60">
-                </figure>
-                <div class="testimonial-author-info">
-                  <h4 class="testimonial-author-name">Param Jain</h4>
-                  <p class="testimonial-author-role">Co-Founder, The Yellow Monk</p>
+            <li class="timeline-item">
+              <div class="timeline-header">
+                <div class="timeline-header-left">
+                  <img src="./assets/images/logos/sdsc.png" alt="SDSC Logo" class="timeline-logo">
+                  <div class="timeline-title-group">
+                    <h4 class="h4 timeline-item-title">San Diego Supercomputer Center — Graduate Research Assistant</h4>
+                    <span class="timeline-location">San Diego</span>
+                  </div>
                 </div>
+                <span class="timeline-year">Feb 2025 – Jun 2025</span>
               </div>
-
-              <div class="testimonial-body">
-                <p class="testimonial-text">
-                  "Tanmay worked as a Software Developer on multiple projects at The Yellow Monk, where he
-                  consistently impressed with his technical proficiency and dedication. He was pivotal in delivering
-                  high-quality applications, bringing a keen attention to detail and a deep understanding of the
-                  development process. His proactive attitude and commitment to continuous improvement made him a
-                  reliable and valuable team member. I highly recommend Tanmay for any role that seeks a skilled
-                  and driven developer."
-                </p>
+              <div class="timeline-text">
+                <p class="timeline-summary">Contributed to systems-level research focused on broadband performance
+                  measurement and network reliability across heterogeneous environments.</p>
+                <ul class="timeline-bullets">
+                  <li>Standardized broadband test configurations to eliminate inconsistent measurements across networks
+                  </li>
+                  <li>Analyzed packet-flow variability and link behavior to improve measurement repeatability and reduce
+                    noise</li>
+                  <li>Strengthened automated testing pipelines with fault-tolerant scheduling and monitoring, reducing
+                    test failures by 30%</li>
+                </ul>
               </div>
-            </div>
+            </li>
 
-          </div>
-        </div>
-      </section>
+            <li class="timeline-item">
+              <div class="timeline-header">
+                <div class="timeline-header-left">
+                  <img src="./assets/images/logos/ion-group.png" alt="ION Trading Logo" class="timeline-logo">
+                  <div class="timeline-title-group">
+                    <h4 class="h4 timeline-item-title">ION Trading — Software Development Engineer</h4>
+                    <span class="timeline-location">Pune</span>
+                  </div>
+                </div>
+                <span class="timeline-year">Jun 2021 – Jul 2024</span>
+              </div>
+              <div class="timeline-text">
+                <p class="timeline-summary">Worked on a large-scale, multi-tenant SaaS trading platform with strict
+                  performance, reliability, and concurrency requirements.</p>
+                <ul class="timeline-bullets">
+                  <li>Improved system throughput by 27% by introducing thread-level parallelism and removing
+                    serialization bottlenecks. Reduced p99 API latency by 15% through SQL hot-path optimizations, index
+                    tuning, and Memcached
+                    caching</li>
+                  <li>Built latency analysis tooling for 25K+ daily API calls, increasing endpoint reliability by 12%
+                  </li>
+                  <li>Designed a scalable Kafka-based notification system unifying Email and Slack delivery, handling
+                    1M+ messages</li>
+                  <li>Standardized cloud infrastructure using AWS CDK, CloudFormation, and Jenkins, reducing
+                    configuration drift and stabilizing deployments across environments</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="timeline-item">
+              <div class="timeline-header">
+                <div class="timeline-header-left">
+                  <img src="./assets/images/logos/theyellowmonk.png" alt="The Yellow Monk Logo" class="timeline-logo">
+                  <div class="timeline-title-group">
+                    <h4 class="h4 timeline-item-title">The Yellow Monk — Software Engineer Intern</h4>
+                    <span class="timeline-location">Pune</span>
+                  </div>
+                </div>
+                <span class="timeline-year">Sep 2020 – May 2021</span>
+              </div>
+              <div class="timeline-text">
+                <p class="timeline-summary">Worked on cross-platform mobile applications with a strong emphasis on
+                  performance, memory efficiency, and user experience.</p>
+                <ul class="timeline-bullets">
+                  <li>Developed and optimized mobile applications using React Native, Flutter, and Redux</li>
+                  <li>Reduced application load times by 40% through profiling, lazy loading, and caching strategies</li>
+                  <li>Improved runtime performance and network efficiency across iOS and Android, increasing user
+                    engagement by 30%</li>
+                </ul>
+              </div>
+            </li>
+
+          </ol>
+
+        </section>
+
+      </article>
 
       <article class="blogs section" style="background-color: transparent; border: none; box-shadow: none;" id="blogs">
 
