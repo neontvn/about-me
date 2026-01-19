@@ -1027,6 +1027,12 @@ main {
   letter-spacing: 0.01em;
 }
 
+.about-inline-link {
+  display: inline !important;
+  color: var(--blue-accent) !important;
+  text-decoration: underline !important;
+}
+
 .about-text-content p {
   margin-bottom: 20px;
 }
