@@ -511,11 +511,13 @@ article.section:last-of-type {
 .hero-scroll-indicator {
   position: absolute;
   bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   color: var(--light-gray-70);
   font-size: var(--fs-8);
@@ -525,6 +527,7 @@ article.section:last-of-type {
   opacity: 0;
   animation: fadeInUp 0.8s ease forwards;
   animation-delay: 1.4s;
+  width: 100%;
 }
 
 /* Hero mobile adjustments */
@@ -3042,7 +3045,7 @@ textarea.form-input::-webkit-resizer {
 .footer {
   width: 100%;
   background: var(--eerie-black-1);
-  padding: 40px 20px;
+  padding: 20px;
   text-align: center;
   border-top: 1px solid var(--jet);
 }
@@ -3050,5 +3053,5 @@ textarea.form-input::-webkit-resizer {
 .footer-content p {
   color: var(--light-gray);
   font-size: var(--fs-6);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
