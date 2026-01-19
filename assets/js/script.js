@@ -1,5 +1,15 @@
 'use strict';
 
+// Page Loader - hide after page loads
+window.addEventListener('load', function () {
+  const loader = document.getElementById('page-loader');
+  if (loader) {
+    setTimeout(() => {
+      loader.classList.add('hidden');
+    }, 500); // Small delay for smoother transition
+  }
+});
+
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
 const sidebar = document.querySelector("[data-sidebar]");
