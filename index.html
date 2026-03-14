@@ -3,1108 +3,754 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Tanmay Nale</title>
-
+  <title>Tanmay Nale — Systems Engineer</title>
+  <meta name="description"
+    content="Software engineer specializing in distributed systems, backend architecture, and AI infrastructure. MS CS @ UC San Diego.">
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-  <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Albert+Sans:wght@300;400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-  <!-- Page Loader -->
-  <div class="page-loader" id="page-loader">
-    <div class="ring">Loading
-      <span></span>
+
+  <!-- ── Loader ── -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-bar"></div>
     </div>
   </div>
 
-  <!-- Top Navigation Bar -->
-  <nav class="navbar" data-navbar>
-    <div class="navbar-container">
-      <a href="#home" class="navbar-brand">
-        <img src="./assets/images/tanmay.png" alt="Tanmay Nale" class="navbar-avatar">
-        <span class="navbar-name">Tanmay Nale</span>
+  <!-- ── Navigation ── -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#home" class="nav-brand">
+        <img src="./assets/images/tanmay.png" alt="Tanmay Nale" class="nav-avatar">
+        <span class="nav-name">Tanmay Nale</span>
       </a>
-      <ul class="navbar-list">
-        <li class="navbar-item">
-          <a href="#about" class="navbar-link active" data-nav-link>About</a>
-        </li>
-        <li class="navbar-item">
-          <a href="#resume" class="navbar-link" data-nav-link>Experience</a>
-        </li>
-        <li class="navbar-item">
-          <a href="#projects" class="navbar-link" data-nav-link>Projects</a>
-        </li>
-        <li class="navbar-item">
-          <a href="#blogs" class="navbar-link" data-nav-link>Blogs</a>
-        </li>
-      </ul>
+      <div class="nav-links" id="nav-links">
+        <a href="#experience" class="nav-link" data-nav-link>Experience</a>
+        <a href="#projects" class="nav-link" data-nav-link>Projects</a>
+        <a href="#writing" class="nav-link" data-nav-link>Writing</a>
+        <a href="#contact" class="nav-link" data-nav-link>Contact</a>
+      </div>
+      <a href="https://drive.google.com/file/d/1TVhyxcZg1QkmL1O9H-DkK85bEUXVwNoT/view?usp=sharing" target="_blank"
+        class="nav-resume">Resume <span class="nav-resume-arrow">&rarr;</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </button>
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-inner">
+      <a href="#experience" class="mobile-menu-link">Experience</a>
+      <a href="#projects" class="mobile-menu-link">Projects</a>
+      <a href="#writing" class="mobile-menu-link">Writing</a>
+      <a href="#contact" class="mobile-menu-link">Contact</a>
+      <a href="https://drive.google.com/file/d/1TVhyxcZg1QkmL1O9H-DkK85bEUXVwNoT/view?usp=sharing" target="_blank"
+        class="mobile-menu-link">Resume</a>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       HERO
+       ══════════════════════════════════════════════════════════════ -->
   <section class="hero" id="home">
-    <div class="hero-content">
-      <p class="hero-greeting">Hi, I'm</p>
-      <h1 class="hero-name">Tanmay Nale</h1>
-      <div class="hero-highlights">
-        <div class="hero-highlight-item">
-          <ion-icon name="briefcase-outline"></ion-icon>
-          <span>Software Engineer Intern @ AppFolio</span>
+    <div class="hero-bg">
+      <div class="hero-glow"></div>
+      <div class="hero-grid-pattern"></div>
+    </div>
+
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <span class="hero-badge anim-hero" style="--d:0">Software Engineer</span>
+
+        <h1 class="hero-title">
+          <span class="hero-line anim-hero" style="--d:1">I engineer systems</span>
+          <span class="hero-line anim-hero" style="--d:2">that <em>scale</em>.</span>
+        </h1>
+
+        <p class="hero-subtitle anim-hero" style="--d:3">Backend architecture, distributed systems, and AI
+          infrastructure &mdash; designed for performance, reliability, and clarity.</p>
+
+        <div class="hero-chips anim-hero" style="--d:4">
+          <span class="chip">
+            <img src="./assets/images/logos/ucsd.png" alt="" class="chip-logo">
+            MS CS @ UC San Diego
+          </span>
+          <span class="chip">
+            <img src="./assets/images/logos/appfolio.png" alt="" class="chip-logo">
+            Ex-AppFolio
+          </span>
+          <span class="chip">
+            <img src="./assets/images/logos/ion-group.png" alt="" class="chip-logo">
+            3 yrs @ ION Trading
+          </span>
         </div>
-        <div class="hero-highlight-item">
-          <ion-icon name="school-outline"></ion-icon>
-          <span>MS CS @ UC San Diego</span>
-        </div>
-        <div class="hero-highlight-item">
-          <ion-icon name="trophy-outline"></ion-icon>
-          <span>3 Years Work Experience</span>
-        </div>
-        <div class="hero-highlight-item">
-          <ion-icon name="code-slash-outline"></ion-icon>
-          <span>Ex-Software Engineer @ ION Group</span>
+
+        <div class="hero-actions anim-hero" style="--d:5">
+          <a href="#projects" class="btn btn-primary">View my work</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
         </div>
       </div>
-      <div class="hero-scroll-indicator">
-        <a href="#about"
-          style="display: flex; flex-direction: column; align-items: center; text-decoration: none; color: inherit; gap: 10px;">
-          <span>Scroll to debug</span>
-          <ion-icon name="chevron-down-outline" style="margin-top: 4px;"></ion-icon>
-        </a>
+    </div>
+
+    <div class="hero-scroll anim-hero" style="--d:6">
+      <span>scroll to explore</span>
+      <div class="scroll-line"></div>
+    </div>
+
+    <aside class="hero-social anim-hero" style="--d:5">
+      <a href="mailto:tvnale.99@gmail.com" title="Email"><ion-icon name="mail-outline"></ion-icon></a>
+      <a href="https://www.linkedin.com/in/tanmay-nale/" target="_blank" title="LinkedIn"><ion-icon
+          name="logo-linkedin"></ion-icon></a>
+      <a href="https://github.com/neontvn" target="_blank" title="GitHub"><ion-icon
+          name="logo-github"></ion-icon></a>
+      <a href="https://x.com/nale_tanmay" target="_blank" title="Twitter"><ion-icon
+          name="logo-twitter"></ion-icon></a>
+    </aside>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       WHAT I BUILD
+       ══════════════════════════════════════════════════════════════ -->
+  <section class="section" id="craft">
+    <div class="container">
+      <header class="section-header" data-reveal>
+        <span class="section-label">Expertise</span>
+        <h2 class="section-title">What I build</h2>
+        <p class="section-subtitle">Systems that handle scale, complexity, and real-world constraints.</p>
+      </header>
+
+      <div class="bento">
+        <div class="bento-card bento-wide" data-reveal>
+          <div class="bento-icon"><ion-icon name="git-network-outline"></ion-icon></div>
+          <h3>Distributed Systems</h3>
+          <p>Consensus protocols, replication, sharding, and fault-tolerant architectures designed for global scale and
+            high availability.</p>
+        </div>
+        <div class="bento-card" data-reveal>
+          <div class="bento-icon"><ion-icon name="server-outline"></ion-icon></div>
+          <h3>Backend Architecture</h3>
+          <p>API design, microservices, event-driven pipelines, and high-throughput data processing.</p>
+        </div>
+        <div class="bento-card" data-reveal>
+          <div class="bento-icon"><ion-icon name="speedometer-outline"></ion-icon></div>
+          <h3>Performance Engineering</h3>
+          <p>Latency optimization, caching, profiling, and system-level tuning for p99 reliability.</p>
+        </div>
+        <div class="bento-card" data-reveal>
+          <div class="bento-icon"><ion-icon name="hardware-chip-outline"></ion-icon></div>
+          <h3>AI Systems &amp; Agents</h3>
+          <p>LLM infrastructure, intelligent agents, memory management, and AI-native application design.</p>
+        </div>
+        <div class="bento-card" data-reveal>
+          <div class="bento-icon"><ion-icon name="construct-outline"></ion-icon></div>
+          <h3>Developer Infrastructure</h3>
+          <p>CI/CD pipelines, cloud-native tooling, observability stacks, and DX optimization.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Left Vertical Social Bar -->
-  <aside class="social-sidebar">
-    <ul class="social-sidebar-list">
-      <li class="social-sidebar-item">
-        <a href="mailto:tvnale.99@gmail.com" class="social-sidebar-link" title="Email">
-          <ion-icon name="mail-outline"></ion-icon>
-        </a>
-      </li>
-      <li class="social-sidebar-item">
-        <a href="tel:+18582750140" class="social-sidebar-link" title="Phone">
-          <ion-icon name="call-outline"></ion-icon>
-        </a>
-      </li>
-      <li class="social-sidebar-item">
-        <a href="https://www.linkedin.com/in/tanmay-nale/" target="_blank" class="social-sidebar-link" title="LinkedIn">
-          <ion-icon name="logo-linkedin"></ion-icon>
-        </a>
-      </li>
-      <li class="social-sidebar-item">
-        <a href="https://github.com/neontvn" target="_blank" class="social-sidebar-link" title="GitHub">
-          <ion-icon name="logo-github"></ion-icon>
-        </a>
-      </li>
-      <li class="social-sidebar-item">
-        <a href="https://x.com/nale_tanmay" target="_blank" class="social-sidebar-link" title="Twitter">
-          <ion-icon name="logo-twitter"></ion-icon>
-        </a>
-      </li>
-    </ul>
-    <div class="social-sidebar-line"></div>
-  </aside>
+  <!-- ══════════════════════════════════════════════════════════════
+       EXPERIENCE
+       ══════════════════════════════════════════════════════════════ -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <header class="section-header" data-reveal>
+        <span class="section-label">Experience</span>
+        <h2 class="section-title">Where I've built</h2>
+        <p class="section-subtitle">From high-frequency trading to supercomputing.</p>
+      </header>
 
-  <main>
-    <div class="main-content">
-      <section class="about-section section" id="about">
-        <div class="about-content">
-          <h2 class="about-heading">About me</h2>
+      <div class="exp-list">
 
-          <div class="about-grid">
-            <div class="about-left">
-              <h3 class="about-subheading">Get to know me!</h3>
-              <div class="about-text-content">
-                <p>I'm a Software Engineer currently pursuing my Master’s in Computer Science at <strong>UC San
-                    Diego</strong>. I enjoy designing and building scalable, reliable software systems with a strong
-                  emphasis on distributed systems, cloud-native architectures, AI infrastructure and backend
-                  engineering. You can explore some of my work in the Projects section.</p>
-
-                <p>I also enjoy sharing insights from my learning and hands-on experience in systems and software
-                  engineering to contribute back to the developer community. Feel free to connect with me on <a
-                    href="https://www.linkedin.com/in/tanmay-nale/" target="_blank"
-                    class="about-inline-link">LinkedIn</a> and <a href="https://medium.com/@tnale" target="_blank"
-                    class="about-inline-link">Medium</a>.</p>
-                <p>I’m actively open to <strong>Full Time Software Engineering (Backend and Full-Stack)</strong>
-                  opportunities where I
-                  can contribute to impactful systems, continue learning and grow alongside strong engineering teams. If
-                  you’re working on interesting problems that align with my background and interests, I’d love to
-                  connect.</p>
-              </div>
-              <div class="about-buttons">
-                <a href="#contact" class="about-btn about-btn-primary">
-                  <span>Contact Me</span>
-                </a>
-                <a href="https://drive.google.com/file/d/1TVhyxcZg1QkmL1O9H-DkK85bEUXVwNoT/view?usp=sharing"
-                  target="_blank" class="about-btn about-btn-secondary">
-                  <span>Resume</span>
-                </a>
-              </div>
+        <!-- AppFolio -->
+        <div class="exp-card" data-reveal>
+          <div class="exp-left">
+            <img src="./assets/images/logos/appfolio.png" alt="AppFolio" class="exp-logo">
+            <div class="exp-meta">
+              <h3 class="exp-role">Software Engineer Intern</h3>
+              <span class="exp-company">AppFolio</span>
+              <span class="exp-date">Jun 2025 &ndash; Sep 2025 &middot; San Diego</span>
             </div>
-
-            <div class="about-right">
-              <h3 class="about-subheading">My Skills</h3>
-              <div class="skill-tags">
-                <span class="skill-tag"><img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="">Java</span>
-                <span class="skill-tag"><img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
-                    alt="">C++</span>
-                <span class="skill-tag"><img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                    alt="">Python</span>
-                <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
-                    alt="">Go</span>
-                <span class="skill-tag"><img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                    alt="">JavaScript</span>
-                <span class="skill-tag"><img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-                    alt="">TypeScript</span>
-                <span class="skill-tag"><img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-                    alt="">PostgreSQL</span>
-                <span class="skill-tag"><img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-                    alt="">MongoDB</span>
-                <span class="skill-tag"><img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="">Spring
-                  Boot</span>
-                <span class="skill-tag"><img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
-                    alt="">Django</span>
-                <span class="skill-tag"><img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-                    alt="">Node.js</span>
-                <span class="skill-tag"><img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="">HTML</span>
-                <span class="skill-tag"><img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="">CSS</span>
-                <span class="skill-tag"><img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                    alt="">React</span>
-                <span class="skill-tag"><img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
-                    alt="">Next.js</span>
-                <span class="skill-tag"><img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
-                    alt="">Angular</span>
-                <span class="skill-tag"><img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
-                    alt="">Redux</span>
-                <span class="skill-tag"><img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="">React
-                  Native</span>
-                <span class="skill-tag"><img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
-                    alt="">Flutter</span>
-                <span class="skill-tag"><img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg"
-                    alt="">Android</span>
-                <span class="skill-tag"><img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"
-                    alt="">AWS</span>
-                <span class="skill-tag"><img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
-                    alt="">GCP</span>
-                <span class="skill-tag"><img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
-                    alt="">Firebase</span>
-                <span class="skill-tag"><img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-                    alt="">Docker</span>
-                <span class="skill-tag"><img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg"
-                    alt="">Jenkins</span>
-                <span class="skill-tag"><img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="">Git</span>
-                <span class="skill-tag"><img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg"
-                    alt="">GitLab</span>
-                <span class="skill-tag"><img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/maven/maven-original.svg"
-                    alt="">Maven</span>
-              </div>
+          </div>
+          <div class="exp-right">
+            <p class="exp-summary">High-traffic insurance and payments flows used by millions of customers.</p>
+            <ul class="exp-bullets">
+              <li>Built cross-platform interfaces with React Native, improving insurance conversion by <strong>30%</strong> for
+                <strong>2M+</strong> users</li>
+              <li>Optimized GraphQL resolvers, increasing API throughput and reducing latency under peak load</li>
+              <li>Improved policy document parsing with confidence scoring, reducing manual review by <strong>25%</strong>
+              </li>
+            </ul>
+            <div class="exp-highlight">
+              <span class="exp-highlight-value">30%</span>
+              <span class="exp-highlight-label">conversion lift</span>
             </div>
           </div>
         </div>
-      </section>
 
-      <article class="resume section" style="background-color: transparent; border: none; box-shadow: none;"
-        id="resume">
-
-        <header>
-          <h2 class="h2 article-title">Experience</h2>
-        </header>
-
-        <section class="timeline">
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-              <div class="timeline-header">
-                <div class="timeline-header-left">
-                  <img src="./assets/images/logos/appfolio.png" alt="AppFolio Logo" class="timeline-logo">
-                  <div class="timeline-title-group">
-                    <h4 class="h4 timeline-item-title">AppFolio — Software Engineer Intern</h4>
-                    <span class="timeline-location">San Diego</span>
-                  </div>
-                </div>
-                <span class="timeline-year">Jun 2025 – Sep 2025</span>
-              </div>
-              <div class="timeline-text">
-                <p class="timeline-summary">Worked on high-traffic insurance and payments flows used by millions of
-                  customers. Focused on frontend performance, backend efficiency, and data accuracy in production
-                  systems.</p>
-                <ul class="timeline-bullets">
-                  <li>Built scalable, pixel-perfect cross-platform interfaces using React Native and modern state
-                    management, improving insurance conversion by 30% for 2M+ users</li>
-                  <li>Optimized GraphQL resolver patterns, increasing API throughput and reducing latency under peak
-                    load</li>
-                  <li>Improved policy document parsing using confidence scoring and rule-based validation, reducing
-                    manual review effort by 25%</li>
-                </ul>
-              </div>
-            </li>
-
-            <li class="timeline-item">
-              <div class="timeline-header">
-                <div class="timeline-header-left">
-                  <img src="./assets/images/logos/sdsc.png" alt="SDSC Logo" class="timeline-logo">
-                  <div class="timeline-title-group">
-                    <h4 class="h4 timeline-item-title">San Diego Supercomputer Center </h4>
-                    <span class="timeline-location">San Diego</span>
-                  </div>
-                </div>
-                <span class="timeline-year">Feb 2025 – Jun 2025</span>
-              </div>
-              <div class="timeline-text">
-                <p class="timeline-summary">Contributed to systems-level research focused on broadband performance
-                  measurement and network reliability across heterogeneous environments.</p>
-                <ul class="timeline-bullets">
-                  <li>Standardized broadband test configurations to eliminate inconsistent measurements across networks
-                  </li>
-                  <li>Analyzed packet-flow variability and link behavior to improve measurement repeatability and reduce
-                    noise</li>
-                  <li>Strengthened automated testing pipelines with fault-tolerant scheduling and monitoring, reducing
-                    test failures by 30%</li>
-                </ul>
-              </div>
-            </li>
-
-            <li class="timeline-item">
-              <div class="timeline-header">
-                <div class="timeline-header-left">
-                  <img src="./assets/images/logos/ion-group.png" alt="ION Trading Logo" class="timeline-logo">
-                  <div class="timeline-title-group">
-                    <h4 class="h4 timeline-item-title">ION Trading — Software Development Engineer</h4>
-                    <span class="timeline-location">Pune</span>
-                  </div>
-                </div>
-                <span class="timeline-year">Jun 2021 – Jul 2024</span>
-              </div>
-              <div class="timeline-text">
-                <p class="timeline-summary">Worked on a large-scale, multi-tenant SaaS trading platform with strict
-                  performance, reliability, and concurrency requirements.</p>
-                <ul class="timeline-bullets">
-                  <li>Improved system throughput by 27% by introducing thread-level parallelism and removing
-                    serialization bottlenecks. Reduced p99 API latency by 15% through SQL hot-path optimizations, index
-                    tuning, and Memcached
-                    caching</li>
-                  <li>Built latency analysis tooling for 25K+ daily API calls, increasing endpoint reliability by 12%
-                  </li>
-                  <li>Designed a scalable Kafka-based notification system unifying Email and Slack delivery, handling
-                    1M+ messages</li>
-                  <li>Standardized cloud infrastructure using AWS CDK, CloudFormation, and Jenkins, reducing
-                    configuration drift and stabilizing deployments across environments</li>
-                </ul>
-              </div>
-            </li>
-
-            <li class="timeline-item">
-              <div class="timeline-header">
-                <div class="timeline-header-left">
-                  <img src="./assets/images/logos/theyellowmonk.png" alt="The Yellow Monk Logo" class="timeline-logo">
-                  <div class="timeline-title-group">
-                    <h4 class="h4 timeline-item-title">The Yellow Monk — Software Engineer Intern</h4>
-                    <span class="timeline-location">Pune</span>
-                  </div>
-                </div>
-                <span class="timeline-year">Sep 2020 – May 2021</span>
-              </div>
-              <div class="timeline-text">
-                <p class="timeline-summary">Worked on cross-platform mobile applications with a strong emphasis on
-                  performance, memory efficiency, and user experience.</p>
-                <ul class="timeline-bullets">
-                  <li>Developed and optimized mobile applications using React Native, Flutter, and Redux</li>
-                  <li>Reduced application load times by 40% through profiling, lazy loading, and caching strategies</li>
-                  <li>Improved runtime performance and network efficiency across iOS and Android, increasing user
-                    engagement by 30%</li>
-                </ul>
-              </div>
-            </li>
-
-          </ol>
-
-        </section>
-
-      </article>
-
-      <article class="projects section" style="background-color: transparent; box-shadow: none; border: none;"
-        id="projects">
-
-        <header>
-          <h2 class="h2 article-title">Projects</h2>
-        </header>
-
-        <section class="projects-list">
-
-          <ul class="projects-grid">
-
-            <li class="project-item project-item-horizontal">
-
-              <figure class="project-img">
-                <img src="./assets/images/projects/image.png" alt="Distributed Video Streaming Hub">
-              </figure>
-
-              <div class="project-content">
-
-                <h3 class="h3 project-title">Distributed Video Streaming Hub</h3>
-
-                <p class="project-description">
-                  Shard-aware gRPC video routing system using consistent hashing across 10+ servers, ensuring 99.99%
-                  metadata consistency with etcd/RAFT and high-throughput processing via Go concurrency, with a Next.js
-                  frontend.
-                </p>
-
-                <p class="project-category">Go · gRPC · Google Cloud Platform </p>
-
-                <div class="project-buttons">
-                  <a href="https://github.com/neontvn/distributed-video-hub" target="_blank"
-                    class="project-btn github-btn">
-                    <ion-icon name="logo-github"></ion-icon>
-                    <span>GitHub</span>
-                  </a>
-                  <a href="https://distributed-video-hub.vercel.app" target="_blank" class="project-btn demo-btn">
-                    <ion-icon name="open-outline"></ion-icon>
-                    <span>Demo</span>
-                  </a>
-                </div>
-
-              </div>
-
-            </li>
-
-            <li class="project-item project-item-horizontal">
-
-              <figure class="project-img">
-                <img src="./assets/images/projects/kv-cache.png" alt="KV-Cache Manager">
-              </figure>
-
-              <div class="project-content">
-
-                <h3 class="h3 project-title">KV-Cache Manager</h3>
-
-                <p class="project-description">
-                  A standalone KV-cache memory manager for LLM inference, focused on block-based allocation, eviction
-                  policies, and memory observability at scale.Designed to decouple memory management from model
-                  execution for easier experimentation and debugging.
-                </p>
-
-                <p class="project-category">C++ · GPU Memory Mgmt · Low-latency LLM Inference</p>
-
-                <div class="project-buttons">
-                  <a href="https://github.com/dev-pulse-systems/kv-cache-orchestrator" target="_blank"
-                    class="project-btn github-btn">
-                    <ion-icon name="logo-github"></ion-icon>
-                    <span>GitHub - work in progress</span>
-                  </a>
-                  <!-- <a href="https://github.com/dev-pulse-systems/kv-cache-orchestrator" target="_blank"
-                    class="project-btn demo-btn">
-                    <ion-icon name="open-outline"></ion-icon>
-                    <span>Demo</span>
-                  </a> -->
-                </div>
-
-              </div>
-
-            </li>
-
-
-            <li class="project-item project-item-horizontal">
-
-              <figure class="project-img">
-                <img src="./assets/images/projects/ticket.png" alt="E-Commerce Platform">
-              </figure>
-
-              <div class="project-content">
-
-                <h3 class="h3 project-title">E-Commerce Platform</h3>
-
-                <p class="project-description">
-                  Ticketing App is a cloud-native event ticketing platform built on an event-driven microservices
-                  architecture, supporting real-time reservations, secure payments, order expiration, and eventual
-                  consistency at scale.
-                </p>
-
-                <p class="project-category">Node.js · TS · MongoDB · Redis · Docker · K8s</p>
-
-                <div class="project-buttons">
-                  <a href="https://github.com/neontvn/TicketingApp" target="_blank" class="project-btn github-btn">
-                    <ion-icon name="logo-github"></ion-icon>
-                    <span>GitHub</span>
-                  </a>
-                  <a href="https://github.com/neontvn/TicketingApp" target="_blank" class="project-btn demo-btn">
-                    <ion-icon name="open-outline"></ion-icon>
-                    <span>Demo</span>
-                  </a>
-                </div>
-
-              </div>
-
-            </li>
-
-            <li class="project-item project-item-horizontal">
-
-              <figure class="project-img">
-                <img src="./assets/images/projects/snippets.png" alt="Developer Extension for VS Code">
-              </figure>
-
-              <div class="project-content">
-
-                <h3 class="h3 project-title">Developer Extension for VS Code</h3>
-
-                <p class="project-description">
-                  Snippets is a VS Code extension for fast, intelligent snippet creation, organization, and sharing,
-                  featuring language-aware snippets, customizable IntelliSense, and seamless workspace and team sync.
-                </p>
-
-                <p class="project-category">TypeScript · VS Code Extension API · Node.js</p>
-
-                <div class="project-buttons">
-                  <a href="https://github.com/cse210-fa24-group13/codesnip" target="_blank"
-                    class="project-btn github-btn">
-                    <ion-icon name="logo-github"></ion-icon>
-                    <span>GitHub</span>
-                  </a>
-                  <a href="https://github.com/cse210-fa24-group13/codesnip" target="_blank"
-                    class="project-btn demo-btn">
-                    <ion-icon name="open-outline"></ion-icon>
-                    <span>Demo</span>
-                  </a>
-                </div>
-
-              </div>
-
-            </li>
-
-            <li class="project-item project-item-horizontal">
-
-              <figure class="project-img">
-                <img src="./assets/images/projects/slack.png" alt="Travis AI — Intelligent Slack Agent">
-              </figure>
-
-              <div class="project-content">
-
-                <h3 class="h3 project-title">Travis AI — Intelligent Slack Agent</h3>
-
-                <p class="project-description">
-                  Travis.ai turns chaotic group chats into effortless travel plans. It understands everyone's vibe,
-                  negotiates preferences using AI agents and delivers a shared, ready-to-use itinerary so your group can
-                  focus on the trip, not the planning.
-                </p>
-
-                <p class="project-category">FastAPI · Python · Letta AI · Slack API · ngrok</p>
-
-                <div class="project-buttons">
-                  <a href="https://github.com/jathinsn27/travis_ai" target="_blank" class="project-btn github-btn">
-                    <ion-icon name="logo-github"></ion-icon>
-                    <span>GitHub</span>
-                  </a>
-                  <a href="https://devpost.com/software/travis-ai" target="_blank" class="project-btn demo-btn">
-                    <ion-icon name="open-outline"></ion-icon>
-                    <span>Demo</span>
-                  </a>
-                </div>
-
-              </div>
-
-            </li>
-
-            <li class="project-item project-item-horizontal">
-
-              <figure class="project-img">
-                <img src="./assets/images/projects/meeting.png" alt="Meeting Summarizer Agent">
-              </figure>
-
-              <div class="project-content">
-
-                <h3 class="h3 project-title">Meeting Summarizer Agent</h3>
-
-                <p class="project-description">
-                  The Meeting Summarizer Agent turns long meetings into clear outcomes capturing decisions, assigning
-                  action items, and syncing everything instantly to Google Calendar and Tasks. Built with persistent
-                  memory, smart scheduling, and context-aware AI.
-                </p>
-
-                <p class="project-category">Python · AI Agents · Gemini LLM · Docker · OAuth 2.0</p>
-
-                <div class="project-buttons">
-                  <a href="https://github.com/Jyotikakakar/Briefly-a-meeting-summarizer-agent" target="_blank"
-                    class="project-btn github-btn">
-                    <ion-icon name="logo-github"></ion-icon>
-                    <span>GitHub</span>
-                  </a>
-                  <a href="https://github.com/Jyotikakakar/Briefly-a-meeting-summarizer-agent" target="_blank"
-                    class="project-btn demo-btn">
-                    <ion-icon name="open-outline"></ion-icon>
-                    <span>Demo</span>
-                  </a>
-                </div>
-
-              </div>
-
-            </li>
-
-
-
-          </ul>
-
-        </section>
-
-      </article>
-
-      <section class="education-section" id="education">
-        <div class="education-content">
-          <h2 class="education-heading">Education</h2>
-
-          <div class="education-grid">
-
-            <div class="education-card">
-              <div class="education-accent-bar"></div>
-              <div class="education-card-inner">
-                <div class="education-header">
-                  <div class="education-logo-wrapper">
-                    <img src="./assets/images/logos/ucsd.png" alt="UC San Diego" class="education-logo">
-                  </div>
-                  <div class="education-info">
-                    <div class="education-top-row">
-                      <h3 class="education-university">University of California San Diego</h3>
-                      <span class="education-badge">Current</span>
-                    </div>
-                    <p class="education-degree">M.S. in Computer Science</p>
-                    <p class="education-specialization">Computer Systems · Sept 2024 - March 2026</p>
-                  </div>
-                </div>
-                <div class="education-courses">
-                  <span class="course-tag">Network Systems</span>
-                  <span class="course-tag">Virtualization</span>
-                  <span class="course-tag">Cloud Computing</span>
-                  <span class="course-tag">Operating Systems</span>
-                  <span class="course-tag">Systems for LLMs & AI Agents</span>
-                  <span class="course-tag">Computer Architecture</span>
-                  <span class="course-tag">Teaching Assistant: Principles of Software Engineering</span>
-                </div>
-              </div>
+        <!-- SDSC -->
+        <div class="exp-card" data-reveal>
+          <div class="exp-left">
+            <img src="./assets/images/logos/sdsc.png" alt="SDSC" class="exp-logo">
+            <div class="exp-meta">
+              <h3 class="exp-role">Research Assistant</h3>
+              <span class="exp-company">San Diego Supercomputer Center</span>
+              <span class="exp-date">Feb 2025 &ndash; Jun 2025 &middot; San Diego</span>
             </div>
-
-            <div class="education-card">
-              <div class="education-accent-bar accent-green"></div>
-              <div class="education-card-inner">
-                <div class="education-header">
-                  <div class="education-logo-wrapper">
-                    <img src="./assets/images/logos/pict.png" alt="PICT" class="education-logo">
-                  </div>
-                  <div class="education-info">
-                    <div class="education-top-row">
-                      <h3 class="education-university">Pune Institute of Computer Technology</h3>
-                      <span class="education-badge gpa-badge">9.77/10 GPA</span>
-                    </div>
-                    <p class="education-degree">B.E. in Computer Engineering</p>
-                    <p class="education-specialization">University of Pune · 2017 - 2021</p>
-                  </div>
-                </div>
-                <div class="education-achievement">
-                  <ion-icon name="trophy"></ion-icon>
-                  <span>Ranked 5th in Pune University</span>
-                </div>
-              </div>
+          </div>
+          <div class="exp-right">
+            <p class="exp-summary">Systems-level research on broadband performance measurement and network reliability.
+            </p>
+            <ul class="exp-bullets">
+              <li>Standardized broadband test configurations to eliminate measurement inconsistencies</li>
+              <li>Analyzed packet-flow variability to improve measurement repeatability and reduce noise</li>
+              <li>Strengthened automated testing pipelines, reducing test failures by <strong>30%</strong></li>
+            </ul>
+            <div class="exp-highlight">
+              <span class="exp-highlight-value">30%</span>
+              <span class="exp-highlight-label">fewer test failures</span>
             </div>
-
           </div>
         </div>
-      </section>
 
-      <section class="testimonials-section" id="testimonials">
-        <div class="testimonials-content">
-          <h2 class="testimonials-heading">What People Say</h2>
-
-          <div class="testimonials-grid">
-
-            <div class="testimonial-card">
-              <div class="testimonial-header">
-                <figure class="testimonial-avatar">
-                  <img src="./assets/images/avatar-1.png" alt="Uday Naik" width="60">
-                </figure>
-                <div class="testimonial-author-info">
-                  <h4 class="testimonial-author-name">Uday Naik</h4>
-                  <p class="testimonial-author-role">VP of Engineering, ION Group</p>
-                </div>
-              </div>
-
-              <div class="testimonial-body">
-                <p class="testimonial-text">
-                  "I had the privilege of working closely with Tanmay for three years, and I can confidently attest to
-                  his excellence as a software developer. Tanmay is a quick learner who effortlessly grasps new
-                  concepts. His problem-solving abilities are exceptional, enabling him to tackle complex challenges
-                  with ease. His dedication to his work, coupled with his collaborative nature, makes him an
-                  invaluable team member. I highly recommend him for any role that requires a dedicated
-                  and skilled software professional."
-                </p>
-              </div>
+        <!-- ION Trading -->
+        <div class="exp-card" data-reveal>
+          <div class="exp-left">
+            <img src="./assets/images/logos/ion-group.png" alt="ION Trading" class="exp-logo">
+            <div class="exp-meta">
+              <h3 class="exp-role">Software Development Engineer</h3>
+              <span class="exp-company">ION Trading</span>
+              <span class="exp-date">Jun 2021 &ndash; Jul 2024 &middot; Pune</span>
             </div>
-
-            <div class="testimonial-card">
-              <div class="testimonial-header">
-                <figure class="testimonial-avatar">
-                  <img src="./assets/images/avatar-4.png" alt="Param Jain" width="60">
-                </figure>
-                <div class="testimonial-author-info">
-                  <h4 class="testimonial-author-name">Param Jain</h4>
-                  <p class="testimonial-author-role">Co-Founder, The Yellow Monk</p>
-                </div>
-              </div>
-
-              <div class="testimonial-body">
-                <p class="testimonial-text">
-                  "Tanmay worked as a Software Developer on multiple projects at The Yellow Monk, where he
-                  consistently impressed with his technical proficiency and dedication. He was pivotal in delivering
-                  high-quality applications, bringing a keen attention to detail and a deep understanding of the
-                  development process. His proactive attitude and commitment to continuous improvement made him a
-                  reliable and valuable team member. I highly recommend Tanmay for any role that seeks a skilled
-                  and driven developer."
-                </p>
-              </div>
+          </div>
+          <div class="exp-right">
+            <p class="exp-summary">Large-scale, multi-tenant SaaS trading platform with strict performance and
+              concurrency requirements.</p>
+            <ul class="exp-bullets">
+              <li>Improved system throughput by <strong>27%</strong> via thread-level parallelism. Reduced p99 latency by
+                <strong>15%</strong> through SQL hot-path optimizations and Memcached</li>
+              <li>Built latency analysis tooling for <strong>25K+</strong> daily API calls, increasing endpoint reliability
+                by 12%</li>
+              <li>Designed Kafka-based notification system handling <strong>1M+</strong> messages across Email and Slack
+              </li>
+              <li>Standardized cloud infra using AWS CDK, CloudFormation, and Jenkins</li>
+            </ul>
+            <div class="exp-highlight">
+              <span class="exp-highlight-value">27%</span>
+              <span class="exp-highlight-label">throughput gain</span>
             </div>
-
           </div>
         </div>
-      </section>
 
-      <article class="blogs section"
-        style="background-color: transparent; border: none; box-shadow: none; margin-top: 0;" id="blogs">
-
-        <header>
-          <h2 class="h2 article-title">Blogs</h2>
-        </header>
-
-        <section class="blog-posts horizontal-scroll">
-
-          <ul class="blog-posts-list horizontal-scroll-track">
-
-            <li class="blog-post-item">
-              <a href="https://medium.com/@tnale/quorums-in-distributed-systems-774694c5cf35" target="_blank">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blogs/quorum.png" alt="Quorums in Distributed Systems" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Systems</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2025-06-10">Jun 10, 2025</time>
-                  </div>
-
-                  <h4 class="h4 blog-item-title">Quorums in Distributed Systems</h4>
-
-                  <p class="blog-text">
-                    Understanding how quorum-based consensus mechanisms work in distributed systems and their role in
-                    ensuring data consistency and availability.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="https://medium.com/@tnale/twitter-timeline-architecture-e1c299646dc7" target="_blank">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blogs/twitter.png" alt="Twitter Timeline Architecture" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Systems</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2025-06-23">Jun 23, 2025</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Twitter Timeline Architecture</h3>
-
-                  <p class="blog-text">
-                    Deep dive into the architectural decisions behind Twitter's timeline system and how it handles
-                    millions of tweets in real-time.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="https://medium.com/@tnale/graph-database-the-unsung-hero-of-your-linkedin-pymk-98479fdc6471"
-                target="_blank">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blogs/linkedin.png" alt="Graph Database in LinkedIn PYMK" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Database</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2025-06-27">Jun 27, 2025</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Graph Database: The Unsung Hero of Your LinkedIn PYMK</h3>
-
-                  <p class="blog-text">
-                    Exploring how LinkedIn uses graph databases to power their "People You May Know" feature and deliver
-                    personalized recommendations.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="https://medium.com/@tnale/why-cassandra-writes-are-blazingly-fast-8937b1231593" target="_blank">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blogs/cassandra.png" alt="Cassandra Write Performance" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Database</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2025-07-11">Jul 11, 2025</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Why Cassandra Writes Are Blazingly Fast</h3>
-
-                  <p class="blog-text">
-                    Analyzing the architectural decisions that make Apache Cassandra one of the fastest write-optimized
-                    databases in the world.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="https://medium.com/@tnale/the-invisible-engine-how-google-docs-syncs-your-offline-edits-28896ea0ab09"
-                target="_blank">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blogs/docs.png" alt=" How Google Docs Syncs Your Offline Edits"
-                    loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Systems</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2025-07-11">Jul 28, 2025</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">The Invisible Engine: How Google Docs Syncs Your Offline Edits</h3>
-
-                  <p class="blog-text">
-                    Exploring the distributed systems techniques that enable Google Docs to seamlessly reconcile offline
-                    edits and real-time collaboration without data loss.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="https://medium.com/@tnale/how-githubs-database-self-destructed-in-43-seconds-d4b4f7b9a617"
-                target="_blank">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blogs/github.png" alt="GitHub's Database Self-Destructed" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Database</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2025-07-11">Sep 15, 2025</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">How GitHub's Database Self-Destructed in 43 Seconds</h3>
-
-                  <p class="blog-text">
-                    Examining how a brief network partition cascaded into a large-scale replication failure, revealing
-                    the real-world trade-offs between consistency, availability and failover in GitHub's database
-                    architecture.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
+        <!-- The Yellow Monk -->
+        <div class="exp-card" data-reveal>
+          <div class="exp-left">
+            <img src="./assets/images/logos/theyellowmonk.png" alt="The Yellow Monk" class="exp-logo">
+            <div class="exp-meta">
+              <h3 class="exp-role">Software Engineer Intern</h3>
+              <span class="exp-company">The Yellow Monk</span>
+              <span class="exp-date">Sep 2020 &ndash; May 2021 &middot; Pune</span>
+            </div>
+          </div>
+          <div class="exp-right">
+            <p class="exp-summary">Cross-platform mobile apps with emphasis on performance and user experience.</p>
+            <ul class="exp-bullets">
+              <li>Developed and optimized mobile apps using React Native, Flutter, and Redux</li>
+              <li>Reduced load times by <strong>40%</strong> through profiling, lazy loading, and caching strategies</li>
+              <li>Improved runtime performance across iOS and Android, increasing engagement by <strong>30%</strong></li>
+            </ul>
+            <div class="exp-highlight">
+              <span class="exp-highlight-value">40%</span>
+              <span class="exp-highlight-label">faster loads</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
+  </section>
 
-  </main>
+  <!-- ══════════════════════════════════════════════════════════════
+       PROJECTS
+       ══════════════════════════════════════════════════════════════ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <header class="section-header" data-reveal>
+        <span class="section-label">Projects</span>
+        <h2 class="section-title">Systems I've shipped</h2>
+        <p class="section-subtitle">Open-source infrastructure, distributed systems, and AI-native tools.</p>
+      </header>
 
+      <div class="project-list">
+
+        <!-- MicroGate -->
+        <article class="project-card" data-reveal>
+          <div class="project-card-top">
+            <div class="project-icon" style="--icon-hue:210"><ion-icon name="git-network-outline"></ion-icon></div>
+            <div class="project-info">
+              <h3 class="project-name">MicroGate</h3>
+              <span class="project-tagline">Production API Gateway</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/neontvn/microgate" target="_blank" class="project-link-btn">GitHub &rarr;</a>
+            </div>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Go</span>
+            <span class="tag">Prometheus</span>
+            <span class="tag">React</span>
+            <span class="tag">JWT</span>
+            <span class="tag">SSE</span>
+          </div>
+          <ul class="project-highlights">
+            <li>Production-grade reverse proxy with auth, rate limiting, circuit breaking, and load balancing</li>
+            <li>Adaptive intelligence layer using z-score anomaly detection to auto-tune rate limits and steer traffic
+            </li>
+            <li>Real-time React dashboard with Server-Sent Events streaming live request logs and backend health</li>
+          </ul>
+        </article>
+
+        <!-- Distributed Video Hub -->
+        <article class="project-card" data-reveal>
+          <div class="project-card-top">
+            <div class="project-icon" style="--icon-hue:260"><ion-icon name="videocam-outline"></ion-icon></div>
+            <div class="project-info">
+              <h3 class="project-name">Distributed Video Streaming Hub</h3>
+              <span class="project-tagline">Shard-aware gRPC video routing</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/neontvn/distributed-video-hub" target="_blank"
+                class="project-link-btn">GitHub &rarr;</a>
+              <a href="https://distributed-video-hub.vercel.app" target="_blank"
+                class="project-link-btn">Demo &rarr;</a>
+            </div>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Go</span>
+            <span class="tag">gRPC</span>
+            <span class="tag">GCP</span>
+            <span class="tag">etcd</span>
+            <span class="tag">Next.js</span>
+          </div>
+          <ul class="project-highlights">
+            <li>Consistent hashing across 10+ servers for shard-aware video routing</li>
+            <li>99.99% metadata consistency via etcd/RAFT consensus and high-throughput Go concurrency</li>
+            <li>Next.js frontend for seamless user experience and real-time streaming</li>
+          </ul>
+        </article>
+
+        <!-- KV-Cache Manager -->
+        <article class="project-card" data-reveal>
+          <div class="project-card-top">
+            <div class="project-icon" style="--icon-hue:330"><ion-icon name="hardware-chip-outline"></ion-icon></div>
+            <div class="project-info">
+              <h3 class="project-name">KV-Cache Manager</h3>
+              <span class="project-tagline">GPU memory manager for LLM inference</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/dev-pulse-systems/kv-cache-orchestrator" target="_blank"
+                class="project-link-btn">GitHub &rarr;</a>
+            </div>
+          </div>
+          <div class="project-tags">
+            <span class="tag">C++</span>
+            <span class="tag">GPU Memory</span>
+            <span class="tag">LLM Inference</span>
+          </div>
+          <ul class="project-highlights">
+            <li>Standalone KV-cache memory manager for LLM inference with block-based allocation</li>
+            <li>Implements eviction policies and memory observability at scale</li>
+            <li>Decouples memory management from model execution for easier experimentation</li>
+          </ul>
+        </article>
+
+        <!-- E-Commerce Platform -->
+        <article class="project-card" data-reveal>
+          <div class="project-card-top">
+            <div class="project-icon" style="--icon-hue:160"><ion-icon name="cart-outline"></ion-icon></div>
+            <div class="project-info">
+              <h3 class="project-name">E-Commerce Platform</h3>
+              <span class="project-tagline">Event-driven microservices on K8s</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/neontvn/TicketingApp" target="_blank"
+                class="project-link-btn">GitHub &rarr;</a>
+            </div>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Node.js</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">Redis</span>
+            <span class="tag">Docker</span>
+            <span class="tag">K8s</span>
+          </div>
+          <ul class="project-highlights">
+            <li>Cloud-native event ticketing platform on event-driven microservices architecture</li>
+            <li>Real-time reservations, secure payments, and order expiration workflows</li>
+            <li>Eventual consistency at scale with distributed systems patterns</li>
+          </ul>
+        </article>
+
+        <!-- Travis AI -->
+        <article class="project-card" data-reveal>
+          <div class="project-card-top">
+            <div class="project-icon" style="--icon-hue:35"><ion-icon name="chatbubbles-outline"></ion-icon></div>
+            <div class="project-info">
+              <h3 class="project-name">Travis AI — Intelligent Slack Agent</h3>
+              <span class="project-tagline">AI-powered travel planning via Slack</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/jathinsn27/travis_ai" target="_blank"
+                class="project-link-btn">GitHub &rarr;</a>
+              <a href="https://devpost.com/software/travis-ai" target="_blank"
+                class="project-link-btn">Demo &rarr;</a>
+            </div>
+          </div>
+          <div class="project-tags">
+            <span class="tag">FastAPI</span>
+            <span class="tag">Python</span>
+            <span class="tag">Letta AI</span>
+            <span class="tag">Slack API</span>
+          </div>
+          <ul class="project-highlights">
+            <li>Turns chaotic group chats into effortless travel plans using AI agents</li>
+            <li>Understands preferences and negotiates using intelligent multi-agent reasoning</li>
+            <li>Delivers shared, ready-to-use itineraries — focus on the trip, not the planning</li>
+          </ul>
+        </article>
+
+        <!-- Meeting Summarizer -->
+        <article class="project-card" data-reveal>
+          <div class="project-card-top">
+            <div class="project-icon" style="--icon-hue:280"><ion-icon name="calendar-outline"></ion-icon></div>
+            <div class="project-info">
+              <h3 class="project-name">Meeting Summarizer Agent</h3>
+              <span class="project-tagline">AI meeting outcomes to Calendar &amp; Tasks</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Jyotikakakar/Briefly-a-meeting-summarizer-agent" target="_blank"
+                class="project-link-btn">GitHub &rarr;</a>
+            </div>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">AI Agents</span>
+            <span class="tag">Gemini</span>
+            <span class="tag">Docker</span>
+            <span class="tag">OAuth 2.0</span>
+          </div>
+          <ul class="project-highlights">
+            <li>Turns long meetings into clear outcomes — captures decisions and assigns action items</li>
+            <li>Syncs everything instantly to Google Calendar and Tasks</li>
+            <li>Built with persistent memory, smart scheduling, and context-aware AI</li>
+          </ul>
+        </article>
+
+        <!-- VS Code Extension -->
+        <article class="project-card" data-reveal>
+          <div class="project-card-top">
+            <div class="project-icon" style="--icon-hue:190"><ion-icon name="code-slash-outline"></ion-icon></div>
+            <div class="project-info">
+              <h3 class="project-name">Developer Extension for VS Code</h3>
+              <span class="project-tagline">Intelligent snippet management</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/cse210-fa24-group13/codesnip" target="_blank"
+                class="project-link-btn">GitHub &rarr;</a>
+            </div>
+          </div>
+          <div class="project-tags">
+            <span class="tag">TypeScript</span>
+            <span class="tag">VS Code API</span>
+            <span class="tag">Node.js</span>
+          </div>
+          <ul class="project-highlights">
+            <li>VS Code extension for fast, intelligent snippet creation, organization, and sharing</li>
+            <li>Language-aware snippets with customizable IntelliSense integration</li>
+            <li>Seamless workspace and team sync for collaborative development</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       PHILOSOPHY
+       ══════════════════════════════════════════════════════════════ -->
+  <section class="section section-alt" id="philosophy">
+    <div class="container">
+      <header class="section-header" data-reveal>
+        <span class="section-label">Philosophy</span>
+        <h2 class="section-title">How I think</h2>
+        <p class="section-subtitle">Engineering principles that guide every system I design.</p>
+      </header>
+
+      <div class="principles">
+        <div class="principle-card" data-reveal>
+          <div class="principle-num">01</div>
+          <h3>Performance is a feature</h3>
+          <p>Every millisecond matters. I profile before I optimize, and I optimize before I ship.</p>
+        </div>
+        <div class="principle-card" data-reveal>
+          <div class="principle-num">02</div>
+          <h3>Observe everything</h3>
+          <p>If you can't measure it, you can't fix it. Metrics, traces, and logs are first-class citizens.</p>
+        </div>
+        <div class="principle-card" data-reveal>
+          <div class="principle-num">03</div>
+          <h3>Design for failure</h3>
+          <p>Systems fail. Good systems fail gracefully. I build with retries, circuit breakers, and graceful
+            degradation.</p>
+        </div>
+        <div class="principle-card" data-reveal>
+          <div class="principle-num">04</div>
+          <h3>Scale horizontally</h3>
+          <p>Vertical scaling is a dead end. I design stateless services, partitioned data, and elastic infrastructure.
+          </p>
+        </div>
+        <div class="principle-card" data-reveal>
+          <div class="principle-num">05</div>
+          <h3>Clean abstractions</h3>
+          <p>Good interfaces hide complexity. I write code that is simple to use and hard to misuse.</p>
+        </div>
+        <div class="principle-card" data-reveal>
+          <div class="principle-num">06</div>
+          <h3>Ship with conviction</h3>
+          <p>I balance engineering rigor with product velocity. The best system is the one that exists.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       EDUCATION
+       ══════════════════════════════════════════════════════════════ -->
+  <section class="section" id="education">
+    <div class="container">
+      <header class="section-header" data-reveal>
+        <span class="section-label">Education</span>
+        <h2 class="section-title">Foundation</h2>
+      </header>
+
+      <div class="edu-grid">
+        <div class="edu-card" data-reveal>
+          <div class="edu-card-accent"></div>
+          <div class="edu-card-body">
+            <div class="edu-header">
+              <img src="./assets/images/logos/ucsd.png" alt="UC San Diego" class="edu-logo">
+              <div class="edu-info">
+                <div class="edu-top">
+                  <h3>University of California San Diego</h3>
+                  <span class="edu-badge">Current</span>
+                </div>
+                <p class="edu-degree">M.S. in Computer Science</p>
+                <p class="edu-detail">Computer Systems &middot; Sep 2024 &ndash; Mar 2026</p>
+              </div>
+            </div>
+            <div class="edu-tags">
+              <span class="tag">Network Systems</span>
+              <span class="tag">Virtualization</span>
+              <span class="tag">Cloud Computing</span>
+              <span class="tag">Operating Systems</span>
+              <span class="tag">Systems for LLMs &amp; AI Agents</span>
+              <span class="tag">Computer Architecture</span>
+              <span class="tag">TA: Software Engineering</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-card" data-reveal>
+          <div class="edu-card-accent accent-green"></div>
+          <div class="edu-card-body">
+            <div class="edu-header">
+              <img src="./assets/images/logos/pict.png" alt="PICT" class="edu-logo">
+              <div class="edu-info">
+                <div class="edu-top">
+                  <h3>Pune Institute of Computer Technology</h3>
+                  <span class="edu-badge badge-gold">9.77 / 10 GPA</span>
+                </div>
+                <p class="edu-degree">B.E. in Computer Engineering</p>
+                <p class="edu-detail">University of Pune &middot; 2017 &ndash; 2021</p>
+              </div>
+            </div>
+            <div class="edu-achievement">
+              <ion-icon name="trophy"></ion-icon>
+              <span>Ranked 5th in Pune University</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       TESTIMONIALS
+       ══════════════════════════════════════════════════════════════ -->
+  <section class="section section-alt" id="testimonials">
+    <div class="container">
+      <header class="section-header" data-reveal>
+        <span class="section-label">Testimonials</span>
+        <h2 class="section-title">What people say</h2>
+      </header>
+
+      <div class="testimonials">
+        <blockquote class="testimonial-card" data-reveal>
+          <div class="testimonial-top">
+            <img src="./assets/images/avatar-1.png" alt="Uday Naik" class="testimonial-avatar">
+            <div>
+              <cite class="testimonial-name">Uday Naik</cite>
+              <span class="testimonial-role">VP of Engineering, ION Group</span>
+            </div>
+          </div>
+          <p class="testimonial-text">&ldquo;I had the privilege of working closely with Tanmay for three years, and I
+            can confidently attest to his excellence as a software developer. Tanmay is a quick learner who effortlessly
+            grasps new concepts. His problem-solving abilities are exceptional, enabling him to tackle complex challenges
+            with ease. His dedication to his work, coupled with his collaborative nature, makes him an invaluable team
+            member.&rdquo;</p>
+        </blockquote>
+
+        <blockquote class="testimonial-card" data-reveal>
+          <div class="testimonial-top">
+            <img src="./assets/images/avatar-4.png" alt="Param Jain" class="testimonial-avatar">
+            <div>
+              <cite class="testimonial-name">Param Jain</cite>
+              <span class="testimonial-role">Co-Founder, The Yellow Monk</span>
+            </div>
+          </div>
+          <p class="testimonial-text">&ldquo;Tanmay worked as a Software Developer on multiple projects at The Yellow
+            Monk, where he consistently impressed with his technical proficiency and dedication. He was pivotal in
+            delivering high-quality applications, bringing a keen attention to detail and a deep understanding of the
+            development process. His proactive attitude and commitment to continuous improvement made him a reliable and
+            valuable team member.&rdquo;</p>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       WRITING
+       ══════════════════════════════════════════════════════════════ -->
+  <section class="section" id="writing">
+    <div class="container">
+      <header class="section-header" data-reveal>
+        <span class="section-label">Writing</span>
+        <h2 class="section-title">What I write about</h2>
+        <p class="section-subtitle">Deep dives into distributed systems, databases, and real-world architecture.</p>
+      </header>
+
+      <div class="writing-grid">
+
+        <a href="https://medium.com/@tnale/quorums-in-distributed-systems-774694c5cf35" target="_blank"
+          class="writing-card" data-reveal>
+          <div class="writing-card-icon"><ion-icon name="server-outline"></ion-icon></div>
+          <span class="tag">Systems</span>
+          <h3>Quorums in Distributed Systems</h3>
+          <p>Understanding how quorum-based consensus mechanisms work and ensure data consistency.</p>
+          <time datetime="2025-06-10">Jun 10, 2025</time>
+        </a>
+
+        <a href="https://medium.com/@tnale/twitter-timeline-architecture-e1c299646dc7" target="_blank"
+          class="writing-card" data-reveal>
+          <div class="writing-card-icon"><ion-icon name="logo-twitter"></ion-icon></div>
+          <span class="tag">Systems</span>
+          <h3>Twitter Timeline Architecture</h3>
+          <p>Deep dive into the architectural decisions behind Twitter's real-time timeline system.</p>
+          <time datetime="2025-06-23">Jun 23, 2025</time>
+        </a>
+
+        <a href="https://medium.com/@tnale/graph-database-the-unsung-hero-of-your-linkedin-pymk-98479fdc6471"
+          target="_blank" class="writing-card" data-reveal>
+          <div class="writing-card-icon"><ion-icon name="logo-linkedin"></ion-icon></div>
+          <span class="tag">Database</span>
+          <h3>Graph Database: The Unsung Hero of LinkedIn PYMK</h3>
+          <p>How LinkedIn uses graph databases to power personalized recommendations at scale.</p>
+          <time datetime="2025-06-27">Jun 27, 2025</time>
+        </a>
+
+        <a href="https://medium.com/@tnale/why-cassandra-writes-are-blazingly-fast-8937b1231593" target="_blank"
+          class="writing-card" data-reveal>
+          <div class="writing-card-icon"><ion-icon name="flash-outline"></ion-icon></div>
+          <span class="tag">Database</span>
+          <h3>Why Cassandra Writes Are Blazingly Fast</h3>
+          <p>Analyzing the architecture behind one of the fastest write-optimized databases.</p>
+          <time datetime="2025-07-11">Jul 11, 2025</time>
+        </a>
+
+        <a href="https://medium.com/@tnale/the-invisible-engine-how-google-docs-syncs-your-offline-edits-28896ea0ab09"
+          target="_blank" class="writing-card" data-reveal>
+          <div class="writing-card-icon"><ion-icon name="document-text-outline"></ion-icon></div>
+          <span class="tag">Systems</span>
+          <h3>How Google Docs Syncs Your Offline Edits</h3>
+          <p>Exploring the distributed systems techniques that enable seamless real-time collaboration.</p>
+          <time datetime="2025-07-28">Jul 28, 2025</time>
+        </a>
+
+        <a href="https://medium.com/@tnale/how-githubs-database-self-destructed-in-43-seconds-d4b4f7b9a617"
+          target="_blank" class="writing-card" data-reveal>
+          <div class="writing-card-icon"><ion-icon name="logo-github"></ion-icon></div>
+          <span class="tag">Database</span>
+          <h3>How GitHub's Database Self-Destructed in 43 Seconds</h3>
+          <p>How a brief network partition cascaded into a large-scale replication failure.</p>
+          <time datetime="2025-09-15">Sep 15, 2025</time>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       CONTACT CTA
+       ══════════════════════════════════════════════════════════════ -->
+  <section class="section section-cta" id="contact">
+    <div class="container">
+      <div class="cta-content" data-reveal>
+        <h2 class="cta-title">Let's build something.</h2>
+        <p class="cta-subtitle">Open to full-time backend and systems engineering roles.<br>If you're solving hard
+          problems at scale, I'd love to talk.</p>
+        <div class="cta-actions">
+          <a href="mailto:tvnale.99@gmail.com" class="btn btn-primary btn-lg">
+            <ion-icon name="mail-outline"></ion-icon>
+            tvnale.99@gmail.com
+          </a>
+        </div>
+        <div class="cta-socials">
+          <a href="https://www.linkedin.com/in/tanmay-nale/" target="_blank">LinkedIn</a>
+          <span class="cta-dot">&middot;</span>
+          <a href="https://github.com/neontvn" target="_blank">GitHub</a>
+          <span class="cta-dot">&middot;</span>
+          <a href="https://x.com/nale_tanmay" target="_blank">Twitter</a>
+          <span class="cta-dot">&middot;</span>
+          <a href="tel:+18582750140">+1 (858) 275-0140</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
   <footer class="footer">
-    <div class="footer-content">
-      <p>&copy; 2026 Tanmay Nale. All rights reserved.</p>
+    <div class="container footer-inner">
+      <span>&copy; 2026 Tanmay Nale</span>
+      <span class="footer-built">Designed &amp; built by hand</span>
     </div>
   </footer>
 
-  <!-- Chatbot Widget Start -->
-  <style>
-    #chatbot-fab {
-      position: fixed;
-      bottom: 32px;
-      right: 32px;
-      width: 56px;
-      height: 56px;
-      background: linear-gradient(135deg, #4f8cff 60%, #6ee7b7 100%);
-      border-radius: 50%;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      z-index: 10001;
-      transition: box-shadow 0.2s;
-    }
-
-    #chatbot-fab:hover {
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
-    }
-
-    #chatbot-fab svg {
-      width: 28px;
-      height: 28px;
-      color: #fff;
-    }
-
-    #chatbot-container {
-      position: fixed;
-      bottom: 100px;
-      right: 32px;
-      width: 340px;
-      max-width: 95vw;
-      height: 440px;
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
-      display: none;
-      flex-direction: column;
-      z-index: 10000;
-      overflow: hidden;
-      border: 1px solid #e5e7eb;
-    }
-
-    #chatbot-header {
-      background: linear-gradient(135deg, #4f8cff 60%, #6ee7b7 100%);
-      color: #fff;
-      padding: 18px 20px 14px 20px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    #chatbot-close {
-      background: none;
-      border: none;
-      color: #fff;
-      font-size: 1.3rem;
-      cursor: pointer;
-      margin-left: 8px;
-    }
-
-    #chatbot-messages {
-      flex: 1;
-      padding: 16px 14px 8px 14px;
-      overflow-y: auto;
-      background: #f8fafc;
-      font-size: 0.98rem;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .chatbot-msg {
-      max-width: 80%;
-      padding: 10px 14px;
-      border-radius: 12px;
-      margin-bottom: 2px;
-      word-break: break-word;
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
-    }
-
-    .chatbot-msg.user {
-      align-self: flex-end;
-      background: linear-gradient(135deg, #4f8cff 60%, #6ee7b7 100%);
-      color: #fff;
-    }
-
-    .chatbot-msg.bot {
-      align-self: flex-start;
-      background: #fff;
-      color: #222;
-      border: 1px solid #e5e7eb;
-    }
-
-    #chatbot-input-row {
-      display: flex;
-      align-items: center;
-      padding: 12px 14px;
-      background: #f1f5f9;
-      border-top: 1px solid #e5e7eb;
-    }
-
-    #chatbot-input {
-      flex: 1;
-      border: none;
-      border-radius: 8px;
-      padding: 10px 12px;
-      font-size: 1rem;
-      background: #fff;
-      margin-right: 8px;
-      outline: none;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
-    }
-
-    #chatbot-send {
-      background: linear-gradient(135deg, #4f8cff 60%, #6ee7b7 100%);
-      border: none;
-      color: #fff;
-      border-radius: 8px;
-      padding: 8px 16px;
-      font-size: 1rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-
-    #chatbot-send:active {
-      background: linear-gradient(135deg, #3b82f6 60%, #34d399 100%);
-    }
-  </style>
-  <div id="chatbot-fab" title="Chat with me!" onclick="openChatbot()">
-    <svg viewBox="0 0 24 24" fill="none">
-      <path
-        d="M12 3C7.03 3 3 6.58 3 11c0 1.7.66 3.28 1.8 4.6-.13.5-.47 1.8-.7 2.7-.1.4.3.8.7.7.9-.23 2.2-.57 2.7-.7C9.72 20.34 11.3 21 13 21c4.97 0 9-3.58 9-8s-4.03-8-9-8z"
-        stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-    </svg>
-  </div>
-  <div id="chatbot-container">
-    <div id="chatbot-header">
-      <span>Ask me anything!</span>
-      <button id="chatbot-close" onclick="closeChatbot()">&times;</button>
-    </div>
-    <div id="chatbot-messages">
-      <div class="chatbot-msg bot">Hi! 👋 I am your portfolio assistant. Ask me anything about this website.</div>
-    </div>
-    <form id="chatbot-input-row" onsubmit="return sendChatbotMessage();">
-      <input id="chatbot-input" type="text" placeholder="Type your question..." autocomplete="off" />
-      <button id="chatbot-send" type="submit">Send</button>
-    </form>
-  </div>
-  <script>
-    const chatbotFab = document.getElementById('chatbot-fab');
-    const chatbotContainer = document.getElementById('chatbot-container');
-    const chatbotMessages = document.getElementById('chatbot-messages');
-    const chatbotInput = document.getElementById('chatbot-input');
-
-    function openChatbot() {
-      chatbotContainer.style.display = 'flex';
-      chatbotFab.style.display = 'none';
-      setTimeout(() => chatbotInput.focus(), 200);
-    }
-    function closeChatbot() {
-      chatbotContainer.style.display = 'none';
-      chatbotFab.style.display = 'flex';
-    }
-    function appendMessage(text, sender) {
-      const msg = document.createElement('div');
-      msg.className = 'chatbot-msg ' + sender;
-      msg.innerText = text;
-      chatbotMessages.appendChild(msg);
-      chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-    }
-    function sendChatbotMessage() {
-      const text = chatbotInput.value.trim();
-      if (!text) return false;
-      appendMessage(text, 'user');
-      chatbotInput.value = '';
-      setTimeout(() => {
-        appendMessage('This is a demo. Backend integration coming soon!', 'bot');
-      }, 600);
-      return false;
-    }
-    window.addEventListener('keydown', e => {
-      if ((e.key === 'c' || e.key === 'C') && e.ctrlKey && chatbotContainer.style.display !== 'flex') {
-        openChatbot();
-      }
-    });
-  </script>
-
-
+  <!-- Scripts -->
   <script src="./assets/js/script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 </body>
 
 </html>
